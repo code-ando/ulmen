@@ -1,0 +1,53 @@
+footer{
+   
+    
+}
+
+footer  .marcas{
+   text-align: center;
+    padding: 10px; 
+   
+   
+   
+
+   
+   
+}
+
+footer img{
+    /* display: flex; */
+    width: 13%;
+   text-align: center;
+   padding:10px;
+
+}
+
+footer .footer-bottom{
+    display: flex;
+    background-color: black;
+    padding:10px;
+    color: white;
+
+    
+
+justify-content: space-around;
+}
+
+footer .contact{
+    display: flex;
+    justify-content: space-around;
+}
+/* footer  .metodos-de-pago{
+    display: flex;
+    justify-content: space-around;
+ } */
+
+footer  .metodos-de-pago img{
+    width: 50%;
+}
+
+footer div h4{
+    padding-bottom: 30px;
+}
+
+
