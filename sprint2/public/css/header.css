@@ -51,6 +51,18 @@ nav {
     text-transform: uppercase;
 }
 
+.icon{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.icon i{
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+}
+
 #check {
     display: none;
 }
@@ -91,5 +103,9 @@ nav {
 
     .menu li a {
         font-size: 12px;
+    }
+
+    .icon {
+        display: none;
     }
 }
