@@ -32,7 +32,7 @@ nav {
 }
 
 .menu {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 100px;
     background: rgba(0, 0, 0, .95);

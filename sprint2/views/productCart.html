@@ -6,30 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1a451b1708.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/css/style.css">
     <title>Carrito de compras</title>
 </head>
 
-<body>
+<body class="cart">
     <header>
         <nav>
 
             <div>
-                <img src="/images/logo.png" alt="logo" class="logo">
+                <a href="index.html"><img src="/images/logo.png" alt="logo" class="logo"></a>
             </div>
 
             <input type="checkbox" id="check">
             <label for="check" class="bar-btn">
                 <i class="fas fa-bars"></i>
             </label>
-
+            
             <ul class="menu">
+
+                <div class="icon">
+                    <li><a href="login.html"><i class="far fa-user"></i></a></li>
+                    <li><a href="register.html"><i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="productCart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </div>
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Hombre</a></li>
                 <li><a href="#">Mujer</a></li>
                 <li><a href="productDetail.html">Tienda</a></li>
             </ul>
-
+            
         </nav>
     </header>
 

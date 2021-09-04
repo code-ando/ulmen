@@ -1,52 +1,52 @@
-#heart {
+.detail #heart {
     display: none;
 }
 
-main section{
+.detail main section{
     width: 90%;
     margin: 0 auto;
 }
 
-main article {
+.detail main article {
     margin: 10px 0;
 }
-main .imagenes {
+.detail main .imagenes {
     display: block;
 }
 
-main .titulo h3{
+.detail main .titulo h3{
     font-size: 22px;
     margin: 5px 0;
     margin-left: 5px;
 }
 
-main .titulo p{
+.detail main .titulo p{
     margin: 5px 0;
     margin-left: 5px;
 }
 
-.producto1 img{
+.detail main .producto1 img{
     width: 100%;
 }
 
-.producto2 {
+.detail main .producto2 {
     text-align: center;
 }
 
-.producto2 img{
+.detail main .producto2 img{
     width: 19%;
 }
 
-main .talle {
+.detail main .talle {
     padding: 5px;
     box-shadow: black;
 }
 
-main .talle h4{
+.detail main .talle h4{
     margin-left: 10px;
 }
 
-main .talles {
+.detail main .talles {
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -56,19 +56,19 @@ main .talles {
     margin: 0 auto;
 }
 
-main .talles {
+.detail main .talles {
     display: flex;
     flex-direction: column;
 }
 
-main .talles .item {
+.detail main .talles .item {
     display: flex;
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
 }
 
-main .talles li{
+.detail main .talles li{
     border: rgba(0, 0, 0, .95) 1px solid; 
     border-radius: 5px;
     padding: 3px 8px;
@@ -77,18 +77,18 @@ main .talles li{
     transform: translateY(3px);
 }
 
-main .detalle li a {
+.detail main .detalle li a {
     color:black;
 }
 
-main .botones{
+.detail main .botones{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     padding: 5px;
 }
 
-main .boton-carrito{
+.detail main .boton-carrito{
         background-color: #35C0ED;
         border: none;
         color: white;
@@ -99,7 +99,7 @@ main .boton-carrito{
         border-radius: 5px;
 }
 
-main .boton-corazon {
+.detail main .boton-corazon {
         border: none;
         color: #2F90B0;
         padding: 15px 32px;
@@ -107,148 +107,148 @@ main .boton-corazon {
         font-size: 24px;
 }
 
-main .boton-carrito:active {
+.detail main .boton-carrito:active {
   box-shadow: 1px 3px rgba(85, 85, 85, 0.500);;
   transform: translateY(2px);
 }
 
-main .boton-carrito:hover{
+.detail main .boton-carrito:hover{
     background-color: #2F90B0 ;
 }
 
-main .boton-corazon:active {
+.detail main .boton-corazon:active {
   text-shadow: 1px 3px rgba(85, 85, 85, 0.500);
   transform: translateY(2px);
 }
 
-main .detalle2 {
+.detail main .detalle2 {
     border: 1px solid;
     border-radius: 5px;
     padding: 5px;
 }
 
-main .detalle2 div{
+.detail main .detalle2 div{
     padding: 5px;
 }
 
-main .detalle2 h4{
+.detail main .detalle2 h4{
     margin: 5px 0;
     margin-left: 5px;
 }
 
-main .recomendaciones {
+.detail main .recomendaciones {
     border-top: 1px solid black;
     text-align: center;
     padding: 15px 0;
 }
 
-main .recomendaciones h2{
+.detail main .recomendaciones h2{
     margin: 10px;
 }
 
-main .reco{
+.detail main .reco{
     display: flex;
     justify-content: space-around;
 }
 
-main .reco img{
+.detail main .reco img{
     width: 30%;
 }
 
 @media screen and (min-width: 769px) {
 
-    .detalle {
+    .detail main .detalle {
         display: flex;
         justify-content: center;
         justify-content: space-evenly;
     }
     
-    .imagenes{
+    .detail main .imagenes{
         width: 50%;
         margin-left: 100px;
     }
 
-    .descripcion {
+    .detail main .descripcion {
         margin: 10px;
         margin-right: 100px;
     }
 
-    main article{
+    .detail main article{
         margin: 5px 0;
     }
 
-    main .titulo h3{
+    .detail main .titulo h3{
         font-size: 18px;
     }
 
-    main .talles li{
+    .detail main .talles li{
         padding: 2px 6px;
         margin: 3px 7px;
     }
 
-    main .boton-corazon {
+    .detail main .boton-corazon {
         padding: 5px 16px;
         font-size: 18px;
     }
 
-    main .detalle2 div {
+    .detail main .detalle2 div {
         padding: 3px;
     }
 
-    main .detalle2 div h4 {
+    .detail main .detalle2 div h4 {
         margin: 3px 0;
         font-size: 12px;
     }
 
-    main .detalle2 div p{
+    .detail main .detalle2 div p{
         font-size: 14px;
     }
 
-    main .detalle2 {
+    .detail main .detalle2 {
         border-radius: 3px;
         padding: 5px;
     }
 
-    main .reco img{
+    .detail main .reco img{
         width: 25%;
     }
 }
 
 @media screen and (min-width: 1279px){
 
-    main article{
+    .detail main article{
         padding: 10px;
         margin: 15px 0;
     }
 
-    main .descripcion{
+    .detail main .descripcion{
         width: 30%;
     }
 
-    main .imagenes{
+    .detail main .imagenes{
         width: 40%;
     }
 
-    .titulo h3{
+    .detail main .titulo h3{
         padding: 10px;
     }
 
-    main .talles {
+    .detail main .talles {
         width: 60%;
         padding: 20px 5px;
     }
 
-    main .talles li{
+    .detail main .talles li{
         padding: 2px 6px;
         margin: 5px 10px;
     }
 
-    main .boton-corazon {
+    .detail main .boton-corazon {
         padding: 10px 20px;
         font-size: 24px;
     }
     
-    main .reco img{
+    .detail main .reco img{
         width: 20%;
     }
 
