@@ -6,15 +6,12 @@ footer  .marcas{
 footer img{
     
     width: 13%;
-   text-align: center;
-   padding:10px;
-
 }
 
-footer .footer-bottom{
+footer .footer-bottom {
     display: flex;
     background-color: black;
-    padding:10px;
+    padding: 5px;
     color: white;
     justify-content: space-around;
 }
@@ -22,6 +19,7 @@ footer .footer-bottom{
 footer .contact{
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 footer  .metodos-de-pago img{
     width: 50%;
@@ -31,4 +29,11 @@ footer div h4{
     padding-bottom: 30px;
 }
 
+footer .redes {
+    display: flex;
+    flex-direction: column;
+} 
 
+footer div h4, footer div {
+    padding: 5px;
+}
