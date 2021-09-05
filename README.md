@@ -29,3 +29,25 @@ El mismo cuenta con ropa, calzado y accesorios en general, con una amplia gama d
       - Vista rapida o ventana emergentes en productos,
   - Scandinavian ( https://scandinavian.com.ar/ ) 
       - Diseño y estructura del Footer
+
+
+## **Retrospectiva :**
+
+#### Empezar a hacer
+- Guardar cambios en conjunto
+- Fijar horarios de reunión 
+
+#### Hacer mas
+- Organizar el Trello
+- Comunicarnos fuera del Sprint
+
+#### Seguir haciendo 
+- Dinámica consultiva
+- Comunicarnos dentro del Sprint
+- Ayudarnos entre los 3
+
+#### Hacer menos
+- Pisarnos
+
+#### Dejar de hacer
+- Las cosas a ultimo momento 
