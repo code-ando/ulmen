@@ -23,7 +23,7 @@
             <label for="check" class="bar-btn">
                 <i class="fas fa-bars"></i>
             </label>
-            
+
             <ul class="menu">
 
                 <div class="icon">
@@ -37,7 +37,7 @@
                 <li><a href="#">Mujer</a></li>
                 <li><a href="productDetail.html">Tienda</a></li>
             </ul>
-            
+
         </nav>
     </header>
 
@@ -54,8 +54,9 @@
         <section class="descuento">
             <h3>CODIGO DE DESCUENTO</h3>
             <span>Ingresa el codigo de tu cupon, credito o giftcard</span>
-            <label for="codigo"></label>
+
             <article class="boton">
+                <label for="codigo"></label>
                 <input type="text" name="codigo" id="codigo">
             </article>
 
@@ -72,7 +73,7 @@
 
                         <h4>Nombre del Producto</h4>
 
-                        <img src="/images/caritoDiego/nikeDunk.jpg" alt="zapatillas" width="100%">
+                        <img src="/images/nikeDunk.jpg" alt="zapatillas" width="100%">
 
                     </article>
                     <article class="form">
@@ -129,7 +130,7 @@
                             <article class="total">
 
                                 <label for="total"></label>
-                                <input type="text" name="total" id="total" width="100px">
+                                <input type="text" name="total" id="total">
                             </article>
                         </div>
 
@@ -154,7 +155,7 @@
 
                         <h4>Nombre del Producto</h4>
 
-                        <img src="/images/caritoDiego/airForce.jpg" alt="zapatillas" width="100%">
+                        <img src="/images/airForce.jpg" alt="zapatillas" width="100%">
 
                     </article>
                     <article class="form">
@@ -211,7 +212,7 @@
                             <article class="total">
 
                                 <label for="total"></label>
-                                <input type="text" name="total" id="total" width="100px">
+                                <input type="text" name="total" id="total">
                             </article>
                         </div>
 
@@ -236,7 +237,7 @@
 
                         <h4>Nombre del Producto</h4>
 
-                        <img src="/images/caritoDiego/jordanLow.jpg" alt="zapatillas" width="100%">
+                        <img src="/images/jordanLow.jpg" alt="zapatillas" width="100%">
 
                     </article>
                     <article class="form">
@@ -293,7 +294,7 @@
                             <article class="total">
 
                                 <label for="total"></label>
-                                <input type="text" name="total" id="total" width="100px">
+                                <input type="text" name="total" id="total">
                             </article>
                         </div>
 
@@ -318,7 +319,7 @@
 
                         <h4>Nombre del Producto</h4>
 
-                        <img src="/images/caritoDiego/nike97.jpg" alt="zapatillas" width="100%">
+                        <img src="/images/nike97.jpg" alt="zapatillas" width="100%">
 
                     </article>
                     <article class="form">
@@ -375,7 +376,7 @@
                             <article class="total">
 
                                 <label for="total"></label>
-                                <input type="text" name="total" id="total" width="100px">
+                                <input type="text" name="total" id="total">
                             </article>
                         </div>
 
@@ -400,7 +401,7 @@
 
                         <h4>Nombre del Producto</h4>
 
-                        <img src="/images/caritoDiego/botinesNike.jpg" alt="zapatillas" width="100%">
+                        <img src="/images/botinesNike.jpg" alt="zapatillas" width="100%">
 
                     </article>
                     <article class="form">
@@ -457,7 +458,7 @@
                             <article class="total">
 
                                 <label for="total"></label>
-                                <input type="text" name="total" id="total" >
+                                <input type="text" name="total" id="total">
                             </article>
                         </div>
 
@@ -489,31 +490,56 @@
                     <h5>Ingresa tu codigo postal, para poder calcular el costo de envio.</h5>
                     <article>
                         <label for="codigoPostal"></label>
-                        <input type="text" name="codigoPostal" id="codigoPostal">
+                        <input class="code" type="text" name="codigoPostal" id="codigoPostal">
                         <div>
                             <input type="submit" value="Agregar Codigo">
                         </div>
+
                     </article>
 
 
                 </div>
                 <div class="totalCompra">
+                    <h4>Total Compra </h4>
                     <form action="total" method="POST">
-                        <label for="subtotal">Subtotal</label>
-                        <input type="text" name="subtotal" id="subtotal">
-                        <label for="envio">Envio</label>
-                        <input type="text" name="envio" id="envio">
-                        <label for="descuento">Descuento</label>
-                        <input type="text" name="descuento" id="descuento">
-                        <label for="total">Total</label>
-                        <input type="text" name="total" id="total">
+                        <div>
+                            <label for="subtotal">Subtotal</label>
+                            <input type="text" name="subtotal" id="subtotal">
+                        </div>
+                        <div>
+                            <label for="envio">Envio</label>
+                            <input type="text" name="envio" id="envio">
+                        </div>
+                        <div>
+                            <label for="descuento">Descuento</label>
+                            <input type="text" name="descuento" id="descuento">
+                        </div>
+                        <div>
+                            <label for="total">Total</label>
+                            <input type="text" name="total" id="total">
+                        </div>
                         <div>
                             <button type="submit">Comprar</button>
+
                         </div>
+
+
                     </form>
 
+                   
+            </section>
+            <section class="tablet">
+                        
+                
 
-                </div>
+                    <button type="submit" value="comprar">Descuento</button>
+                    <button type="submit" value="comprar">Codigo Postal</button>
+                    <button type="submit" value="comprar">comprar</button>
+                
+                    
+                
+
+
             </section>
         </section>
 
@@ -526,7 +552,7 @@
 
             </div>
             <div class="imgPagos">
-                <img src="/images/caritoDiego/mediosdepago.png" alt="Medios de Pago">
+                <img src="/images/mediosdepago.png" alt="Medios de Pago">
 
 
             </div>
@@ -542,9 +568,11 @@
             <img src="/images/dc.png" alt="DC">
             <img src="/images/dc2.png" alt="DC2">
             <img src="/images/Levis-logo.svg" alt="Levis">
-            <img src="/images/kisspng-the-north-face-logo-clothing-brand-outdoor-recreat-5b081144d3a247.6339381815272553648669.png" alt="THENORTHFACE">
+            <img src="/images/kisspng-the-north-face-logo-clothing-brand-outdoor-recreat-5b081144d3a247.6339381815272553648669.png"
+                alt="THENORTHFACE">
             <img src="/images/ripcurl.png" alt="ripcurl">
-            <img src="/images/kisspng-tommy-hilfiger-fashion-pvh-logo-clothing-tommy-hilfiger-logo-5b12e6c1b337e3.8466659615279653777341.png" alt="TOMMY HILFIGER">
+            <img src="/images/kisspng-tommy-hilfiger-fashion-pvh-logo-clothing-tommy-hilfiger-logo-5b12e6c1b337e3.8466659615279653777341.png"
+                alt="TOMMY HILFIGER">
 
         </div>
         </section>
