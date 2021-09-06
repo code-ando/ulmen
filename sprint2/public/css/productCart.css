@@ -347,10 +347,32 @@ width: 100px;
         width: 55px;
     }
 
+    .cart main .principal {
+        display: flex;
+        flex-direction: column;
+    }
+
     .cart main .principal .tablet{
-        display: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5%;
     }
     
+    .cart main .principal .tablet button {
+        display: block;
+        text-align:center ;
+        background-color: var(--botonVerde);
+        margin-top: 20px;
+        width: 100px;
+        box-shadow: 1px 3px rgb(165, 165, 165);
+        border-radius: 50%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
 
 }
 
