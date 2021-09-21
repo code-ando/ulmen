@@ -379,7 +379,7 @@ width: 100px;
    
 
 
-@media (min-width: 768px) and (max-width:992px ){
+@media (min-width: 768px){
 
     
 
@@ -438,12 +438,4 @@ width: 100px;
         margin-top: 10px;
         margin-right: 10px;
     }
-
-
-
-
-    
-    
-    
-   
 }

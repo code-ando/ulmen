@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Gonzaloherenu/grupo_7_ulmen#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sxpress": "^1.0.3"
   }
 }
