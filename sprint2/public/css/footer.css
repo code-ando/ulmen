@@ -1,0 +1,75 @@
+footer .marcas {
+    width: 95%;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+footer .marcas h1{
+    text-align: center;
+    padding: 5px;
+}
+footer .imagenes{
+ text-align: center;
+    padding: 5px;
+   
+}
+footer img {
+    
+    margin: 0 15px;
+    width: 10%;
+    
+   
+}
+
+
+footer .footer-bottom {
+    display: flex;
+    background-color: black;
+    padding: 5px;
+    color: #24c5ee;
+    justify-content: space-around;
+    text-align: center;
+}
+.footer-bottom h4{
+    margin: 20px;
+}
+
+footer ul li{
+color: hsl(187, 55%, 44%);
+font-size: 16;
+
+padding: 5px;
+}
+/*footer .contact{
+    display: none;
+}*/
+
+footer .redes {
+    display: flex;
+    flex-direction: column;
+   
+
+} 
+
+footer div h4, footer div {
+    padding: 5px;
+}
+
+
+  .redes  :hover {
+    background-color: rgb(148, 238, 245);
+  }
+  footer .legal{
+      background-color: black;
+  }
+  footer .legal p {
+      color: chartreuse;
+      text-align: center;
+      padding: 10px;
+  }
+
+  
+
+
+
+ 
