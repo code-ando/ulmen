@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1a451b1708.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Carrito de compras</title>
-</head>
+    <%- include('./partials/head') %>
 
 <body class="cart">
-    <header>
-        <nav>
-
-            <div>
-                <a href="index"><img src="/images/logo.png" alt="logo" class="logo"></a>
-            </div>
-
-            <input type="checkbox" id="check">
-            <label for="check" class="bar-btn">
-                <i class="fas fa-bars"></i>
-            </label>
-
-            <ul class="menu">
-
-                <div class="icon">
-                    <li><a href="login"><i class="far fa-user"></i></a></li>
-                    <li><a href="register"><i class="fas fa-sign-in-alt"></i></a></li>
-                    <li><a href="productCart"><i class="fas fa-shopping-cart"></i></a></li>
-                </div>
-
-                <li><a href="index">Home</a></li>
-                <li><a href="#">Hombre</a></li>
-                <li><a href="#">Mujer</a></li>
-                <li><a href="productDetail">Tienda</a></li>
-            </ul>
-
-        </nav>
-    </header>
+    <%- include('./partials/header') %>
 
     <main>
 
@@ -561,55 +526,7 @@
 
     </main>
 
-    <footer>
-        <section class="marcas"> <b> -MARCAS- </b></section>
-        <div class="imagenes">
-            <img src="/images/adidas.png" alt="adidas">
-            <img src="/images/dc.png" alt="DC">
-            <img src="/images/dc2.png" alt="DC2">
-            <img src="/images/Levis-logo.svg" alt="Levis">
-            <img src="/images/kisspng-the-north-face-logo-clothing-brand-outdoor-recreat-5b081144d3a247.6339381815272553648669.png"
-                alt="THENORTHFACE">
-            <img src="/images/ripcurl.png" alt="ripcurl">
-            <img src="/images/kisspng-tommy-hilfiger-fashion-pvh-logo-clothing-tommy-hilfiger-logo-5b12e6c1b337e3.8466659615279653777341.png"
-                alt="TOMMY HILFIGER">
-
-        </div>
-        </section>
-
-        <section class="footer-bottom">
-
-            <div>
-                <h4>Acerca de Ulmen</h4>
-                <ul class="links">
-                    <li>Nosotros</li>
-                    <li>Sustentabilidad</li>
-                    <li>Empleo</li>
-                    <li>Meta y objetivos</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Ayuda</h4>
-                <ul class="links">
-                    <li>Cambios y Devoluciones</li>
-                    <li>Preguntas Frecuentes</li>
-                    <li>Envío y entrega</li>
-                </ul>
-
-            </div>
-
-            <div>
-                <h4 class="contact">Contacto</h4>
-                <div class="redes">
-                    <div class="facebook"><i class="fab fa-facebook"></i></div>
-                    <div class="instagram"><i class="fab fa-instagram"></i></div>
-                    <div class="wsp"><i class="fab fa-whatsapp"></i></div>
-                </div>
-
-            </div>
-        </section>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
