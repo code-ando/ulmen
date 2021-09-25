@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
+<!-- HEAD -->
 <%-include('./partials/head')%>
 <!-- HEADER -->
-<%-include('./partials/header')%>
-<body>
 
-<h1>EDIT</h1>
-    
+<body class="edit">
+    <%-include('./partials/header')%>
+
+    <main>
+        <form class="formularios" action="#">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Nombre del producto</label>
+            </div>
+
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Selecciona un color</option>
+                    <option value="1">Rojo</option>
+                    <option value="2">Azul</option>
+                    <option value="3">Verde</option>
+                </select>
+                <label for="floatingSelect">Color</label>
+            </div>
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Talle</label>
+            </div>
+
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Selecciona el genero</option>
+                    <option value="1">******</option>
+                    <option value="2">******</option>
+                    <option value="3">******</option>
+                </select>
+                <label for="floatingSelect">Genero</label>
+            </div>
+
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Selecciona la coleccion</option>
+                    <option value="1">******</option>
+                    <option value="2">******</option>
+                    <option value="3">******</option>
+                </select>
+                <label for="floatingSelect">Coleccion</label>
+            </div>
+
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Selecciona el estado del producto</option>
+                    <option value="1">En venta</option>
+                    <option value="2">Agotado</option>
+                </select>
+                <label for="floatingSelect">Estado</label>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label"></label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+        </form>
+        <div class="botones">
+            <button class="enviar" type="button">Agregar</button>
+            <button class="enviar" type="button">Editar</button>
+        </div>
+
+    </main>
+
+    <%-include('./partials/footer')%>
 </body>
 
-<%-include('./partials/footer')%>
 </html>

@@ -3,6 +3,9 @@ footer .marcas {
     margin: 10px auto;
     padding: 5px;
 }
+footer .marcas img {
+    width: 100px;
+}
 
 footer .marcas h1{
     text-align: center;

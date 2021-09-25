@@ -1,14 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
+<!-- HEAD -->
 <%-include('./partials/head')%>
-<!-- HEADER -->
-<%-include('./partials/header')%>
-<body>
 
-<h1>Admin</h1>
-    
+<body class="admin">
+    <!-- HEADER -->
+    <%-include('./partials/header')%>
+
+    <div class="list">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Talle</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Coleccion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><img src="/images/productos/producto1/producto1-1.jpg" alt=""></th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>$9999</td>
+                    <td>
+                        <div class="botones">
+                            <button class="enviar" type="button">Editar</button>
+                            <button class="enviar" type="button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="/images/productos/producto2/producto2-1.jpg" alt=""></th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>$9999</td>
+                    <td>
+                        <div class="botones">
+                            <button class="enviar" type="button">Editar</button>
+                            <button class="enviar" type="button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="/images/productos/producto3/producto3-2.jpg" alt=""></th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>$9999</td>
+                    <td>
+                        <div class="botones">
+                            <button class="enviar" type="button">Editar</button>
+                            <button class="enviar" type="button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="/images/productos/producto4/producto4-1.webp" alt=""></th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>$9999</td>
+                    <td>
+                        <div class="botones">
+                            <button class="enviar" type="button">Editar</button>
+                            <button class="enviar" type="button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="/images/productos/producto5/producto5-2.webp" alt=""></th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>$9999</td>
+                    <td>
+                        <div class="botones">
+                            <button class="enviar" type="button">Editar</button>
+                            <button class="enviar" type="button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <%-include('./partials/footer')%>
 </body>
 
-<%-include('./partials/footer')%>
 </html>
