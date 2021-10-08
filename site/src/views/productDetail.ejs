@@ -10,25 +10,25 @@
             <div class="detalle">
                 <article class="imagenes">
                     <div class="producto1">
-                        <img src="/images/aaa.jpg" alt="producto">
+                        <img src="/images/<%= product.image %>" alt="producto">
                     </div>
                     <div class="producto2">
-                        <img src="/images/aaa.jpg" alt="producto">
-                        <img src="/images/aaa.jpg" alt="producto">
-                        <img src="/images/aaa.jpg" alt="producto">
-                        <img src="/images/aaa.jpg" alt="producto">
+                        <img src="/images/<%= product.image %>" alt="producto">
+                        <img src="/images/<%= product.image %>" alt="producto">
+                        <img src="/images/<%= product.image %>" alt="producto">
+                        <img src="/images/<%= product.image %>" alt="producto">
                     </div>
                 </article>
 
                 <div class="descripcion">
                     <article class="titulo">
-                        <small>Hombre * Originales</small>
+                        <small> <%= product.para %></small>
 
-                        <h3>ZAPATILLAS BUSENITZ VULC II</h3>
+                        <h3> <%= product.name %></h3>
 
-                        <small>Core Black / Cloud White / Vivid Red</small>
+                        <p> <%= product.color %></p>
 
-                        <p>$9999</p>
+                        <p> <%= product.precio %></p>
                     </article>
 
                     <article class="talle">
