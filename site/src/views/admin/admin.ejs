@@ -18,88 +18,33 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Color</th>
                     <th scope="col">Talle</th>
-                    <th scope="col">Genero</th>
+                    <th scope="col">Para</th>
                     <th scope="col">Coleccion</th>
+                    <th scope="col">Estado</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Opciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row"><img src="/images/productos/producto1/producto1-1.jpg" alt=""></th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>$9999</td>
-                    <td>
-                        <div class="botones">
-                            <button class="enviar" type="button">Editar</button>
-                            <button class="enviar" type="button">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="/images/productos/producto2/producto2-1.jpg" alt=""></th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>$9999</td>
-                    <td>
-                        <div class="botones">
-                            <button class="enviar" type="button">Editar</button>
-                            <button class="enviar" type="button">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="/images/productos/producto3/producto3-2.jpg" alt=""></th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>$9999</td>
-                    <td>
-                        <div class="botones">
-                            <button class="enviar" type="button">Editar</button>
-                            <button class="enviar" type="button">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="/images/productos/producto4/producto4-1.webp" alt=""></th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>$9999</td>
-                    <td>
-                        <div class="botones">
-                            <button class="enviar" type="button">Editar</button>
-                            <button class="enviar" type="button">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="/images/productos/producto5/producto5-2.webp" alt=""></th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>$9999</td>
-                    <td>
-                        <div class="botones">
-                            <button class="enviar" type="button">Editar</button>
-                            <button class="enviar" type="button">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
+                <% products.forEach(element =>{%>
+                    <tr>
+                        <th scope="row"><img src="/images/<%= element.image %>" alt=""></th>
+                        <td><%= element.name %></td>
+                        <td><%= element.color %></td>
+                        <td><%= element.talle %></td>
+                        <td><%= element.para %></td>
+                        <td><%= element.coleccion %></td>
+                        <td><%= element.estado %></td>
+                        <td><%= element.precio %></td>
+                        <td class="adminboton">
+                            <div class="botones">
+                                <button class="enviar" type="button">Editar</button>
+                                <button class="enviar" type="button">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                <% }) %>
+                
             </tbody>
         </table>
     </div>

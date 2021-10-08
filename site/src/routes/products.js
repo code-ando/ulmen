@@ -6,5 +6,7 @@ router.get('/productDetail', productController.productDetail)
 
 router.get('/productCart', productController.productCart)
 
+router.get('/productDetail/:id', productController.productos)
+
 
 module.exports = router
