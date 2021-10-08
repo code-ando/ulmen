@@ -26,7 +26,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% products.forEach(element =>{%>
+                <%products.forEach(element =>{%>
                     <tr>
                         <th scope="row"><img src="/images/<%= element.image %>" alt=""></th>
                         <td><%= element.name %></td>
@@ -39,7 +39,8 @@
                         <td class="adminboton">
                             <div class="botones">
                                 <button class="enviar" type="button">Editar</button>
-                                <button class="enviar" type="button">Eliminar</button>
+                                <form action="./<%= products.id %>?_method=DELETE " method="POST">
+                                    <button type="submit" class="enviar">ELIMINAR</button>
                             </div>
                         </td>
                     </tr>
