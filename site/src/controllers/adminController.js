@@ -16,7 +16,7 @@ module.exports = {
     },
 
     edit: (req,res) => {
-        res.render("admin/edit")
+        res.render("admin/edit", {products} )
     },
 
     update: (req,res) => {
@@ -50,6 +50,17 @@ module.exports = {
         
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
         res.redirect('/')
+        
+    },
+    store: (req,res) => {
+        const create = req.body
+        create.id = products.lenght+1
+        products.push (create)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
+        res.redirect ("/")
+
     }
    
 }
+
+
