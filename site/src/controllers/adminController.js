@@ -54,7 +54,7 @@ module.exports = {
     },
     store: (req,res) => {
         const create = req.body
-        create.id = products.lenght+1
+        create.id = products.length+1
         products.push (create)
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
         res.redirect ("/")

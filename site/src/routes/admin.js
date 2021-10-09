@@ -11,10 +11,10 @@ router.get('/create', create)
 router.post('/create', store)
 
 router.get('/edit',edit)
-router.put('/edit/id', update)
+router.put('/edit/:id', update)
 
 
-router.delete('/delete/:id', destroy)
+router.delete('/:id', destroy)
 
 
 
