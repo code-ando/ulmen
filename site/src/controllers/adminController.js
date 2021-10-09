@@ -12,7 +12,7 @@ module.exports = {
     },
 
     create:(req, res) => {
-        res.render("admin/create")
+        res.render("admin/create", {products})
     },
 
     edit: (req,res) => {
