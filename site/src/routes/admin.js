@@ -11,7 +11,7 @@ router.get('/create', create)
 router.post('/create')
 
 router.get('/edit',edit)
-router.put('/edit/id', update)
+router.put('/edit/:id', update)
 
 
 router.delete('/delete/:id', destroy)
