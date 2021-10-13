@@ -34,11 +34,11 @@ module.exports = {
 
             fs.writeFileSync(productsFilePath,JSON.stringify(products))
 
-            res.redirect('/')
+            res.redirect('/admin')
 
 
         } else{
-            res.redirect("/")
+            res.redirect("/admin")
         }
 
     },
@@ -49,7 +49,7 @@ module.exports = {
         products = products.filter(product => product.id !== +req.params.id)
         
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
-        res.redirect('/')
+        res.redirect('/admin')
         
     },
     store: (req,res) => {
@@ -57,7 +57,7 @@ module.exports = {
         create.id = products.length+1
         products.push (create)
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
-        res.redirect ("/")
+        res.redirect ("/admin")
 
     }
    
