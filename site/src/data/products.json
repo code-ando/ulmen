@@ -1,17 +1,5 @@
 [
   {
-    "id": 2,
-    "name": "producto2",
-    "color": "...",
-    "talle": "...",
-    "género": "unisex",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "...",
-    "precio": "$4030",
-    "image": "productos/producto2/producto2-1.jpg"
-  },
-  {
     "id": 3,
     "name": "producto3",
     "color": "...",
