@@ -18,7 +18,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Color</th>
                     <th scope="col">Talle</th>
-                    <th scope="col">Para</th>
+                    <th scope="col">Para</th> <!-- cambiar nombre a genero -->
                     <th scope="col">Coleccion</th>
                     <th scope="col">Estado</th>
                     <th scope="col">Precio</th>
@@ -38,7 +38,7 @@
                         <td><%= element.precio %></td>
                         <td class="adminboton">
                             <div class="botones">
-                                <button class="enviar" type="button">Editar</button>
+                                <a href="/admin/edit/ <%= element.id %>" class="enviar">EDITAR</a>
                                 <form action="/admin/<%= element.id %>?_method=DELETE " method="POST">
                                     <button type="submit" class="enviar">ELIMINAR</button>
                             </div>

@@ -12,21 +12,29 @@ module.exports = {
     },
 
     create:(req, res) => {
-        res.render("admin/create")
+        res.render("admin/create", {products})
     },
 
     edit: (req,res) => {
-        res.render("admin/edit", {products} )
+        let id = req.params.id
+        let idFind=products.find(element=>{
+            return element.id === +id
+        })
+
+     res.render('admin/edit',{idFind})
     },
+   
+
+
 
     update: (req,res) => {
-        const productUpdate = products.find(e=>e.id===+req.params.id)
-        const {name,color,talle,para,descripcion,coleccion,estado,precio} = req.body
+        const productUpdate = products.find(element=>element.id===+req.params.id)
+        const {name,color,talle,genero,descripcion,coleccion,estado,precio} = req.body
         if(productUpdate){
             productUpdate.name = name
             productUpdate.color = color
-            productUpdate.talle = talle
-            productUpdate.para = para
+            productUpdate.talle = +talle
+            productUpdate.genero = genero
             productUpdate.descripcion = descripcion
             productUpdate.coleccion = coleccion
             productUpdate.estado =  estado
@@ -59,7 +67,7 @@ module.exports = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
         res.redirect ("/admin")
 
-    }
+    },
    
 }
 
