@@ -30,6 +30,7 @@ module.exports = {
     update: (req,res) => {
         const productUpdate = products.find(element=>element.id===+req.params.id)
         const {name,color,talle,genero,descripcion,coleccion,estado,precio} = req.body
+       
         if(productUpdate){
             productUpdate.name = name
             productUpdate.color = color
@@ -39,7 +40,8 @@ module.exports = {
             productUpdate.coleccion = coleccion
             productUpdate.estado =  estado
             productUpdate.precio = +precio
-
+           
+            
             fs.writeFileSync(productsFilePath,JSON.stringify(products))
 
             res.redirect('/admin')
@@ -63,7 +65,7 @@ module.exports = {
     store: (req,res) => {
         const create = req.body
         create.id = products.length+1
-        products.push (create)
+         products.push (create)
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
         res.redirect ("/admin")
 
