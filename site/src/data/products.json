@@ -1,11 +1,6 @@
 [
   {
-    "id": 10,
-    "talle": null,
-    "precio": null,
-    "image": "productos/producto10/producto10-1.jpg"
-  },
-  {
+
     "id": 11,
     "name": "producto11",
     "color": "...",
@@ -169,5 +164,17 @@
     "precio": "7500",
     "image": "",
     "id": 24
+  },
+  {
+    "name": "tintu",
+    "color": "Selecciona un color",
+    "talle": "",
+    "descripcion": "",
+    "genero": "Selecciona el genero",
+    "coleccion": "Selecciona la coleccion",
+    "estado": "Selecciona el estado del producto",
+    "precio": "",
+    "image": "mochi01.png",
+    "id": 16
   }
 ]
