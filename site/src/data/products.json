@@ -1,17 +1,5 @@
 [
   {
-    "id": 10,
-    "name": "producto10",
-    "color": "",
-    "talle": "...",
-    "género": "hombre",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "...",
-    "precio": "$4700",
-    "image": "productos/producto10/producto10-1.jpg"
-  },
-  {
     "id": 11,
     "name": "producto11",
     "color": "...",
@@ -175,5 +163,17 @@
     "precio": "7500",
     "image": "",
     "id": 24
+  },
+  {
+    "name": "tintu",
+    "color": "Selecciona un color",
+    "talle": "",
+    "descripcion": "",
+    "genero": "Selecciona el genero",
+    "coleccion": "Selecciona la coleccion",
+    "estado": "Selecciona el estado del producto",
+    "precio": "",
+    "image": "mochi01.png",
+    "id": 16
   }
 ]
