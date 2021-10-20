@@ -8,7 +8,7 @@
     "genero": "unisex",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$1350",
     "image": "productos/producto11/producto11-1.webp"
   },
@@ -32,7 +32,7 @@
     "genero": "unisex",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$3500",
     "image": "productos/producto13/producto13-1.webp"
   },
@@ -56,7 +56,7 @@
     "genero": "hombre",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$1300",
     "image": "productos/producto15/producto15-1.jpg"
   },
@@ -104,7 +104,7 @@
     "genero": "niño",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$3600",
     "image": "productos/producto19/producto19-1.webp"
   },
