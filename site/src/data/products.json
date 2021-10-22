@@ -1,14 +1,15 @@
 [
   {
-    "id": 10,
-    "talle": null,
-    "precio": null,
-    "image": "productos/producto10/producto10-1.jpg"
-  },
-  {
+
     "id": 11,
-    "talle": null,
-    "precio": null,
+    "name": "producto11",
+    "color": "...",
+    "talle": "...",
+    "genero": "unisex",
+    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
+    "coleccion": "...",
+    "estado": "vistos",
+    "precio": "$1350",
     "image": "productos/producto11/producto11-1.webp"
   },
   {
@@ -29,7 +30,7 @@
     "genero": "unisex",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$3500",
     "image": "productos/producto13/producto13-1.webp"
   },
@@ -51,7 +52,7 @@
     "genero": "hombre",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$1300",
     "image": "productos/producto15/producto15-1.jpg"
   },
@@ -99,7 +100,7 @@
     "genero": "niño",
     "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
     "coleccion": "...",
-    "estado": "...",
+    "estado": "vistos",
     "precio": "$3600",
     "image": "productos/producto19/producto19-1.webp"
   },
@@ -149,15 +150,15 @@
     "id": 24
   },
   {
-    "name": "ropa nueva",
-    "color": "Blanco",
-    "talle": "45",
+    "name": "tintu",
+    "color": "Selecciona un color",
+    "talle": "",
     "descripcion": "",
-    "genero": "hombre",
-    "coleccion": "primavera",
-    "estado": "agotado",
-    "precio": "5000",
-    "image": "",
-    "id": 17
+    "genero": "Selecciona el genero",
+    "coleccion": "Selecciona la coleccion",
+    "estado": "Selecciona el estado del producto",
+    "precio": "",
+    "image": "mochi01.png",
+    "id": 16
   }
 ]
