@@ -15,55 +15,61 @@
             </div>
 
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="color" id="color">
                     <option selected><%= product.color%></option>
-                    <option value="1">Rojo</option>
-                    <option value="2">Azul</option>
-                    <option value="3">Verde</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
                 </select>
                 <label for="floatingSelect">Color</label>
             </div>
 
             <div class="form-floating">
-                <label for="floatingSelect">Talle</label>
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea"><%= product.talle%></label>
+                <label for="floatingSelect">Talle <%= product.talle%></label>
+                <textarea name="Talle" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                
                 
             </div>
             
 
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="genero" id="genero">
                     <option selected><%= product.genero%></option>
-                    <option value="1">******</option>
-                    <option value="2">******</option>
-                    <option value="3">******</option>
+                    <option value="Mujer">Hombre</option>
+                    <option value="Hombre">Mujer</option>
+                    <option value="Niños">Niños</option>
+                    <option value="Niñas">Niñas</option>
+                    <option value="Unisex">Unisex</option>
                 </select>
                 <label for="floatingSelect">Genero</label>
             </div>
 
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="coleccion" id='coleccion'>
                     <option selected><%= product.coleccion%></option>
-                    <option value="1">******</option>
-                    <option value="2">******</option>
-                    <option value="3">******</option>
+                    <option value="invierno">Invierno</option>
+                    <option value="verano">Verano</option>
+                    <option value="primavera">Primavera</option>
+                    <option value="otoño">Otoño</option>
                 </select>
                 <label for="floatingSelect">Coleccion</label>
             </div>
 
             <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="estado" id="estado">
                     <option selected><%=product.estado%></option>
-                    <option value="1">En venta</option>
-                    <option value="2">Agotado</option>
+                    <option value="en venta">En venta</option>
+                    <option value="agotado">Agotado</option>
                 </select>
                 <label for="floatingSelect">Estado</label>
             </div>
 
             <div class="input-group mb-3">
-                <span class="input-group-text">$</span>
-                <input type="text" value="<%= product.precio%>" class="form-control" aria-label="Amount (to the nearest dollar)">
+                
+                <input name="precio" type="text" value="<%= product.precio%>" class="form-control" aria-label="Amount (to the nearest dollar)">
                 <span class="input-group-text">$</span>
             </div>
 
