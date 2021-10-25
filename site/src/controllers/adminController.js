@@ -56,21 +56,27 @@ module.exports = {
 
     
     destroy: (req,res) => {
-        products = products.filter(product => product.id !== +req.params.id)
+        products = products.filter(product=> product.id !== +req.params.id)
         
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
+        fs.writeFileSync(productsFilePath, JSON.stringify(products))
         res.redirect('/admin')
         
     },
-    store: (req,res) => {
-        const create = req.body
-        create.id = products.length+1
-         products.push (create)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
-        res.redirect ("/admin")
+    
+      
+      
+        store: (req,res) => {
+            const create = req.body
+            create.id = products.length+1
+            create.image = req.file ? req.file.filename : 'nino.jpg'
+             products.push (create)
+            fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2))
+            res.redirect ("/admin")
+    
+        
+    }
 
-    },
-   
+      
+
+
 }
-
-

@@ -1,29 +1,5 @@
 [
   {
-    "id": 11,
-    "name": "producto11",
-    "color": "...",
-    "talle": "...",
-    "género": "unisex",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "...",
-    "precio": "$1350",
-    "image": "productos/producto11/producto11-1.webp"
-  },
-  {
-    "id": 12,
-    "name": "producto12",
-    "color": "...",
-    "talle": "...",
-    "género": "unisex",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "...",
-    "precio": "$6300",
-    "image": "productos/producto12/producto12-1.webp"
-  },
-  {
     "id": 13,
     "name": "producto13",
     "color": "...",
@@ -120,52 +96,7 @@
     "image": "productos/producto20/producto20-1.jpg"
   },
   {
-    "color": "1",
-    "genero": "3",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "color": "1",
-    "genero": "3",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "color": "3",
-    "genero": "2",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "name": "maiki",
-    "color": "Negro",
-    "talle": "S",
-    "descripcion": "ni idea",
-    "genero": "Unisex",
-    "coleccion": "primavera",
-    "estado": "1",
-    "precio": "3",
-    "image": "",
-    "id": null
-  },
-  {
-    "name": "changos",
-    "color": "Negro",
-    "talle": "xxl",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "genero": "Unisex",
-    "coleccion": "invierno",
-    "estado": "en venta",
-    "precio": "7500",
-    "image": "",
-    "id": 24
-  },
-  {
-    "name": "tintu",
+    "name": "loi",
     "color": "Selecciona un color",
     "talle": "",
     "descripcion": "",
@@ -173,7 +104,7 @@
     "coleccion": "Selecciona la coleccion",
     "estado": "Selecciona el estado del producto",
     "precio": "",
-    "image": "mochi01.png",
-    "id": 16
+    "id": 9,
+    "image": "img-1635187452556.jpg"
   }
 ]

@@ -8,7 +8,7 @@
     <%-include('./partials/header')%>
 
     <main>
-        <form class="formularios" action="/admin/create" method="POST">
+        <form class="formularios" action="/admin/create" method="POST" enctype="multipart/form-data">
             <div class="form-floating">
                 <textarea name ="name"class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                 <label for="floatingTextarea">Nombre del producto</label>
