@@ -1,9 +1,26 @@
-const path = require('path')
 
-const controllers = {
-    register: (req, res) => {res.render(path.join(__dirname, '..', 'views' , 'register.ejs'))},
+const {validationResult} = require('express-validator')
+const usuarios = require("../data/user.json")
 
-    login: (req, res) => {res.render(path.join(__dirname, '..', 'views' , 'login.ejs'))}
+
+module.exports = {
+    register: (req, res) => {res.render('register')},
+
+    login: (req, res) => {res.render('login')},
+
+    proccessLogin: (req, res) => {
+        const usuarioAloguear = usuarios.find(e => e.email === req.body.email)
+        if (req.body.password === usuarioAloguear.password){
+            res.redirect("/")
+        }
+        else {
+
+            //hacer validaciones - enviar errores//
+            res.render("login")
+
+
+
+        }
+      }
 }
 
-module.exports = controllers

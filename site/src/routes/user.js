@@ -1,10 +1,12 @@
 const router = require('express').Router()
-const path = require('path')
-const userController = require('../controllers/userControllers')
+const {login, register, proccessLogin} = require('../controllers/userControllers')
+const validate = require ("../middlewares/validate")
 
-router.get('/register', userController.register)
+router.get('/register', register)
 
-router.get('/login', userController.login)
+router.get('/login', login)
+
+router.post('/login', validate, proccessLogin)
 
 
 module.exports = router
