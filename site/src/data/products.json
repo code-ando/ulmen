@@ -1,28 +1,7 @@
 [
+ 
   {
 
-    "id": 11,
-    "name": "producto11",
-    "color": "...",
-    "talle": "...",
-    "genero": "unisex",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "vistos",
-    "precio": "$1350",
-    "image": "productos/producto11/producto11-1.webp"
-  },
-  {
-    "id": 12,
-    "color": "Gris",
-    "talle": null,
-    "genero": "Mujer",
-    "coleccion": "primavera",
-    "estado": "en venta",
-    "precio": null,
-    "image": "productos/producto12/producto12-1.webp"
-  },
-  {
     "id": 13,
     "name": "producto13",
     "color": "...",
@@ -111,45 +90,6 @@
     "image": "productos/producto20/producto20-1.jpg"
   },
   {
-    "color": "1",
-    "genero": "3",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "color": "1",
-    "genero": "3",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "color": "3",
-    "genero": "2",
-    "coleccion": "1",
-    "estado": "1",
-    "id": null
-  },
-  {
-    "name": "maiki",
-    "color": "Negro",
-    "talle": "S",
-    "descripcion": "ni idea",
-    "genero": "Unisex",
-    "coleccion": "primavera",
-    "estado": "1",
-    "precio": "3",
-    "image": "",
-    "id": null
-  },
-  {
-    "talle": null,
-    "precio": null,
-    "image": "",
-    "id": 24
-  },
-  {
     "name": "tintu",
     "color": "Selecciona un color",
     "talle": "",
@@ -158,7 +98,7 @@
     "coleccion": "Selecciona la coleccion",
     "estado": "Selecciona el estado del producto",
     "precio": "",
-    "image": "mochi01.png",
-    "id": 16
+    "id": 9,
+    "image": "img-1635187452556.jpg"
   }
 ]
