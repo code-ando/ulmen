@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "first_name": "Roma",
     "last_name": "Atalaya",
@@ -6,7 +7,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_1.jpg"
-  }, {
+  },
+  {
     "id": 2,
     "first_name": "Elpes",
     "last_name": "Cuesso",
@@ -14,7 +16,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_2.jpg"
-  }, {
+  },
+  {
     "id": 3,
     "first_name": "Martha",
     "last_name": "Steel",
@@ -22,7 +25,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_3.jpg"
-  }, {
+  },
+  {
     "id": 4,
     "first_name": "Carlos",
     "last_name": "Rolcha",
@@ -30,7 +34,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_4.jpg"
-  }, {
+  },
+  {
     "id": 5,
     "first_name": "Rosamel",
     "last_name": "Anor",
@@ -38,7 +43,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_5.jpg"
-  }, {
+  },
+  {
     "id": 6,
     "first_name": "Celso",
     "last_name": "Andujar",
@@ -46,7 +52,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_6.jpg"
-  }, {
+  },
+  {
     "id": 7,
     "first_name": "Marilyn ",
     "last_name": "Vargas Argentina",
@@ -54,7 +61,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_7.jpg"
-  }, {
+  },
+  {
     "id": 8,
     "first_name": "Damian",
     "last_name": "Berisford",
@@ -62,7 +70,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_8.jpg"
-  }, {
+  },
+  {
     "id": 9,
     "first_name": "Carlos",
     "last_name": "Browson",
@@ -70,7 +79,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_9.jpg"
-  }, {
+  },
+  {
     "id": 10,
     "first_name": "Dale",
     "last_name": "Mayon",
@@ -78,7 +88,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_10.jpg"
-  }, {
+  },
+  {
     "id": 11,
     "first_name": "Charles ",
     "last_name": "Veyron",
@@ -86,7 +97,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_11.jpg"
-  }, {
+  },
+  {
     "id": 12,
     "first_name": "Monica",
     "last_name": "Hayas",
@@ -94,7 +106,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_12.jpg"
-  }, {
+  },
+  {
     "id": 13,
     "first_name": "Ramiro",
     "last_name": "Tomba",
@@ -102,7 +115,8 @@
     "password": "Guitarra335",
     "category": "user",
     "image": "user_13.jpg"
-  }, {
+  },
+  {
     "id": 14,
     "first_name": "Santiago",
     "last_name": "Valenzuela",
@@ -110,7 +124,8 @@
     "password": "Chango1324",
     "category": "admin",
     "image": "user_14.jpg"
-  }, {
+  },
+  {
     "id": 15,
     "first_name": "Gabriela",
     "last_name": "Quispe",
@@ -118,7 +133,8 @@
     "password": "Chamiga321",
     "category": "admin",
     "image": "user_15.jpg"
-  }, {
+  },
+  {
     "id": 16,
     "first_name": "Diego Carlos",
     "last_name": "Diaz",
@@ -126,7 +142,8 @@
     "password": "Chamaco456",
     "category": "admin",
     "image": "user_16.jpg"
-  }, {
+  },
+  {
     "id": 17,
     "first_name": "Gonzalo",
     "last_name": "Hereñu",
@@ -134,7 +151,8 @@
     "password": "Meromero321",
     "category": "admin",
     "image": "user_17.jpg"
-  }, {
+  },
+  {
     "id": 18,
     "first_name": "Rochell",
     "last_name": "Dakin",
@@ -142,7 +160,8 @@
     "password": "vjDnrp8hqiW",
     "category": "user",
     "image": "user_18.jpg"
-  }, {
+  },
+  {
     "id": 19,
     "first_name": "Kalinda",
     "last_name": "Dilawey",
@@ -150,7 +169,8 @@
     "password": "oglNRAsDD",
     "category": "user",
     "image": "user_19.jpg"
-  }, {
+  },
+  {
     "id": 20,
     "first_name": "Sarina",
     "last_name": "Slaght",
@@ -158,4 +178,5 @@
     "password": "cWEDXkaE",
     "category": "user",
     "image": "user_20.jpg"
-  }]
+  }
+]
