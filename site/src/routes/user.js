@@ -1,18 +1,26 @@
 const router = require('express').Router()
-const {login, register, processLogin,processRegister} = require('../controllers/userControllers')
-const guestUser = require('../middlewares/guestUser')
-const validate = require('../middlewares/validate')
+
 
 /* const validate = require ("../middlewares/validate") */
+const {login, register, agregarUser, processLogin} = require('../controllers/userControllers')
+const { json } = require('express')
+const imagenUser = require('../middlewares/userstorage')
+const guestUser = require('../middlewares/guestUser')
 
-router.get('/register', register)
+
+//Register
+router.get('/register',guestUser, register)
+router.post('/register', imagenUser.single('image'),agregarUser)
 
 
-router.get('/login',validate, guestUser, login)
 
+
+
+
+
+//Login
+router.get('/login',guestUser, login)
 router.post('/login', processLogin)
-
-
 
 
 module.exports = router

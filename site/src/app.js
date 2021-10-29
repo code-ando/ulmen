@@ -6,7 +6,7 @@ const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session')
 const recordame = require('./middlewares/cookieRecordame')
-const localsCheck = require('./middlewares/localsCheck')
+
 
 
 const main = require('./routes/main')
@@ -27,8 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
 app.use(session({secret : "clave secreta"}))
-app.use(recordame)
-app.use(localsCheck)
+/* app.use(recordame) */
+
 
 
 app.use('/', main)

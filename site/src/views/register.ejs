@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %>
+<%- include('./partials/head') %>
 
 <body class="register">
     <%- include('./partials/header') %>
 
     <main>
-        
-        <form class="formularios" action="#">
-                <input type="text" name="Nombre" placeholder="Juan">  
+
+        <form class="formularios" action="/register" method="POST" enctype="multipart/form-data">
+            <div class="form">
+                <input type="text" name="Nombre" placeholder="Juan">
                 <input type="text" name="Apellido" placeholder="Gonzalez">
                 <input type="text" name="DNI" placeholder="D.N.I.">
-                <input type="text" name="Fecha-de-nacimiento" placeholder="Fecha de nacimiento">  
-                <input type="text" name="Sexo" placeholder="Sexo">
-                <input type="text" name="Email" placeholder="juangonzalez@gmail.com">  
+                <input type="date" name="Fecha-de-nacimiento">
+                <select name="sexo" >
+                    <option selected>Selecciona la tu sexo</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+                <input type="text" name="Email" placeholder="juangonzalez@gmail.com">
                 <input type="password" name="Contraseña" placeholder="Contraseña">
                 <input type="password" name="Confirmar-contraseña" placeholder="Confirmar Contraseña">
-                <div class="botones">
-                    <button class="enviar" type="button">Enviar</button>
-                    <small><a href="/login">¿Ya tienes cuenta? Ingresa aqui</a></small>
-                </div>  
-          </form>
+            </div>
+            <div class="image">
+                <input name="image" type="file">
+            </div>
+            <div class="botones">
+                <button class="enviar" type="submit">Enviar</button>
+                <small><a href="/login">¿Ya tienes cuenta? Ingresa aqui</a></small>
+            </div>
+        </form>
 
     </main>
 
     <%- include('./partials/footer') %>
 </body>
+
 </html>
