@@ -6,17 +6,11 @@ const {login, register, agregarUser, processLogin} = require('../controllers/use
 const { json } = require('express')
 const imagenUser = require('../middlewares/userstorage')
 const guestUser = require('../middlewares/guestUser')
-
+const validateRegister = require('../middlewares/validateRegister')
 
 //Register
 router.get('/register',guestUser, register)
-router.post('/register', imagenUser.single('image'),agregarUser)
-
-
-
-
-
-
+router.post('/register', imagenUser.single('image'), validateRegister,agregarUser)
 
 //Login
 router.get('/login',guestUser, login)
