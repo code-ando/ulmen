@@ -12,7 +12,10 @@ module.exports = {
     login: (req, res) => {res.render('login')},
 
     agregarUser: (req, res) => {
-        const agregar = req.body
+        const errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+            const agregar = req.body
         agregar.id = usuarios.length + 1
         agregar.image = req.file ? req.file.filename : 'nino.jpg'
 
@@ -21,6 +24,9 @@ module.exports = {
         fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2))
         
         res.redirect("/login")
+        } else {
+            res.render('register', {errors: errors.mapped(), old: req.body})
+        }
     },
     
     proccessLogin: (req, res) => {
