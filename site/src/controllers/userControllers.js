@@ -38,11 +38,13 @@ module.exports = {
 
     agregarUser: (req, res) => {
         const errors = validationResult(req)
+        console.log("llego hasta aca");
 
         if (errors.isEmpty()) {
             const agregar = req.body
         agregar.id = usuarios.length + 1
         agregar.image = req.file ? req.file.filename : 'nino.jpg'
+        agregar.Contraseña = bcrypt.hashSync(req.body.Contraseña, 10)
 
         usuarios.push(agregar)
 
@@ -58,20 +60,18 @@ module.exports = {
 
         const usuarioALoguear = usuarios.find(e => e.Email === req.body.Email)
 
-        if (usuarioALoguear && usuarioALoguear.Contraseña === req.body.Contraseña) {
+        if (usuarioALoguear && bcrypt.compare(req.body.Contraseña, usuarioALoguear.Contraseña)) {
 
             req.session.usuarioLogueado = usuarioALoguear 
 
-            res.send("usuario logueado")
+            res.redirect("/")
             
             /*  if (req.body.recordarme !== undefined) {
                  res.cookie("recordarme", usuarioALoguear.email, { maxAge: 20 * 1000 })
                 }
              */
         
-        
-
-    } 
+         } 
     else {
         res.render("login", {errors: {msg: 'Email o contraseña incorrecta' }})
     }

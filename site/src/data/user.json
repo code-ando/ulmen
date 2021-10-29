@@ -202,5 +202,29 @@
     "Confirmar-Contraseña": "12345678",
     "id": 22,
     "image": "nino.jpg"
+  },
+  {
+    "Nombre": "Diego",
+    "Apellido": "Diaz",
+    "DNI": "40664184",
+    "Fecha-de-nacimiento": "2021-10-07",
+    "Sexo": "hombre",
+    "Email": "diegocarlosdiaz5@gmail.com",
+    "Contraseña": "$2a$10$9tJlGrxwQ0ZqftUxMT1NTu2dgO/AXEdpfOpyjKgqE3HQPg7/H9wsi",
+    "Confirmar-Contraseña": "12345678",
+    "id": 23,
+    "image": "nino.jpg"
+  },
+  {
+    "Nombre": "Diego",
+    "Apellido": "Diaz",
+    "DNI": "40664184",
+    "Fecha-de-nacimiento": "2021-10-16",
+    "Sexo": "hombre",
+    "Email": "diegocarlosdiaz5@gmail.com",
+    "Contraseña": "$2a$10$wrUU/CgvRsfd6L204GWqN.5XDd.L5p6mWx1BZEdpzItxalIiMkVyu",
+    "Confirmar-Contraseña": "12345678",
+    "id": 24,
+    "image": "img-1635551184520.jpg"
   }
 ]
