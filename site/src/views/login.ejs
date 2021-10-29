@@ -8,11 +8,21 @@
     <main>
 
         <form class="formularios" action="/login" method="POST">
+            <label for="email"> </label>
             <input type="text" name="email" placeholder="ingrese su E-Mail">  
         
-             <small> <%locals.errors && errors.msg ? errors.msg : null%> </small> 
+             <!-- <small> locals.errors && errors.msg ? errors.msg : null%> </small>  -->
+             <label for="password"> </label>
             <input type="password" name="password" placeholder="password">
-            <small> <%locals.errors && errors.msg ? errors.msg : null%> </small> 
+            <!-- <small> locals.errors && errors.msg ? errors.msg : null%> </small>  -->
+
+            <div class='checkLogin'>
+                <input type="checkbox" name="recordarme" id="checkbox">
+                <label for="recordarme">Recordarme</label>
+            </div>
+            <% if (locals.errors && errors.msg) { %> 
+                <small> <%= errors.msg %>  </small>
+                <% } %> 
             <div class="botones">
                 <button class="enviar" type="submit">Ingresar</button>
                 <small><a href="/register">¿No tienes cuenta registrate aqui?</a></small>

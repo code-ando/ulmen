@@ -178,5 +178,29 @@
     "password": "cWEDXkaE",
     "category": "user",
     "image": "user_20.jpg"
+  },
+  {
+    "Nombre": "Diego",
+    "Apellido": "Diaz",
+    "DNI": "40664184",
+    "Fecha-de-nacimiento": "2021-10-01",
+    "Sexo": "hombre",
+    "Email": "diegocarlosdiaz5@gmail.com",
+    "Contraseña": "12345678",
+    "Confirmar-Contraseña": "12345678",
+    "id": 21,
+    "image": "nino.jpg"
+  },
+  {
+    "Nombre": "juan",
+    "Apellido": "gomez",
+    "DNI": "40664184",
+    "Fecha-de-nacimiento": "2021-10-09",
+    "Sexo": "hombre",
+    "Email": "juan@gmail.ciom",
+    "Contraseña": "12345678",
+    "Confirmar-Contraseña": "12345678",
+    "id": 22,
+    "image": "nino.jpg"
   }
 ]
