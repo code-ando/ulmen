@@ -12,8 +12,7 @@ module.exports = [
 
     check('Sexo').notEmpty().withMessage("Se requiere que seleccione el Sexo"),
 
-    check('Email').notEmpty().withMessage("Se requiere el Email").isEmail(),
+    check('email').notEmpty().withMessage("Se requiere el Email").isEmail(),
 
-    check('Contraseña').notEmpty().isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres")
-
+    check('password').notEmpty().isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres")
 ]

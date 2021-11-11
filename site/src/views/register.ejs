@@ -33,17 +33,21 @@
                 </select>
                 
 
-                <input type="text" name="Email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.Email ? old.Email : null %>">
-                <%if (locals.errors && errors.Email) {%>
-                    <small> <%= errors.Email.msg %> </small>
+                <input type="email" name="email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.email ? old.email : null %>">
+                <%if (locals.errors && errors.email) {%>
+                    <small> <%= errors.email.msg %> </small>
                 <% } %>
 
-                <input type="password" name="Contraseña" placeholder="Contraseña">
-                <%if (locals.errors && errors.Contraseña) {%>
-                    <small> <%= errors.Contraseña.msg %> </small>
+                <input type="password" name="password" placeholder="Contraseña">
+                <%if (locals.errors && errors.password) {%>
+                    <small> <%= errors.password.msg %> </small>
+
+                    
                 <% } %>
 
-                <input type="password" name="Confirmar-Contraseña" placeholder="Confirmar Contraseña">
+                <input type="password" name="Confirmar-password" placeholder="Confirmar Contraseña">
+
+               
             </div>
             <div class="image">
                 <input name="image" type="file">
