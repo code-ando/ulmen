@@ -1,0 +1,19 @@
+.profile .container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.profile .perfil {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.profile .perfil img {
+    padding: 10px;
+    width: 100%;
+    object-fit: cover;
+
+}

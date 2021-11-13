@@ -6,7 +6,7 @@
     z-index: 0;
 }
 
-small {
+.login small {
     color : red;
 }
 
@@ -44,6 +44,11 @@ small {
 .login main .formularios .botones{
     display: flex;
     flex-direction: column;
+}
+
+.login main .formularios .checkLogin input{
+    box-shadow: none;
+    margin-top: 20px;
 }
 
 .login .icon{
