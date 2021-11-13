@@ -13,6 +13,7 @@ const main = require('./routes/main')
 const products = require('./routes/products')
 const user = require('./routes/user')
 const adminRouter = require('./routes/admin')
+const userLogueado = require('./middlewares/userLogueado');
 
 const app = express();
 
@@ -26,9 +27,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
-app.use(session({secret : "clave secreta"}))
+app.use(session({
+  secret : "clave secreta",
+  resave : false,
+  saveUninitialized : false,
+}))
 app.use(recordame) 
-
+app.use(userLogueado)
 
 
 app.use('/', main)
