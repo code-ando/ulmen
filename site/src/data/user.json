@@ -1,59 +1,24 @@
 [
   {
-    "id": 1,
-    "first_name": "Roma",
-    "last_name": "Atalaya",
-    "email": "atalaroma93@gmail.com",
-    "password": "Guitarra335",
-    "category": "user",
-    "image": "user_1.jpg"
-  },
-  {
-    "Nombre": "Diego",
-    "Apellido": "Diaz",
-    "DNI": "40664184",
-    "Fecha-de-nacimiento": "2021-10-07",
+    "Nombre": "gonzalo",
+    "Apellido": "valdes",
+    "DNI": "12345678",
+    "Fecha-de-nacimiento": "2021-11-25",
     "Sexo": "hombre",
-    "email": "diegocarlosdiaz5@gmail.com",
-    "password": "$2a$10$9tJlGrxwQ0ZqftUxMT1NTu2dgO/AXEdpfOpyjKgqE3HQPg7/H9wsi",
-    "Confirmar-password": "12345678",
-    "id": 23,
-    "image": "nino.jpg"
+    "email": "gonzaherenu@gmail.com",
+    "password": "$2a$10$wEgDVC7Q9p4gZw8u9AoauuCUXUNZbFdvYpo68qsfxUU3xFFftVljO",
+    "id": 6,
+    "image": "img-1636853905316.jpg"
   },
   {
-    "Nombre": "Diego",
-    "Apellido": "Diaz",
-    "DNI": "40664184",
-    "Fecha-de-nacimiento": "2021-10-16",
-    "Sexo": "hombre",
-    "email": "diegocarlosdiaz5@gmail.com",
-    "password": "$2a$10$wrUU/CgvRsfd6L204GWqN.5XDd.L5p6mWx1BZEdpzItxalIiMkVyu",
-    "Confirmar-password": "12345678",
-    "id": 24,
-    "image": "img-1635551184520.jpg"
-  },
-  {
-    "Nombre": "Diego",
-    "Apellido": "Diaz",
-    "DNI": "40664184",
-    "Fecha-de-nacimiento": "2021-11-19",
-    "Sexo": "hombre",
-    "email": "ddddd@gmail.com",
-    "password": "$2a$10$4aBW3hlLmcapj7gveQWD2uTmineqf5eHhK0duqopBH15yUkyUsC5m",
-    "Confirmar-password": "12345678",
-    "id": 25,
-    "image": "nino.jpg"
-  },
-  {
-    "Nombre": "hola",
+    "Nombre": "antonio ",
     "Apellido": "valdes",
     "DNI": "12345678",
     "Fecha-de-nacimiento": "2021-11-18",
     "Sexo": "hombre",
-    "email": "hola@gmail.com",
-    "password": "$2a$10$ws5b7fEH22vVEDHMSCVeq.ddrf0C7PAFLYxu/Hc34QQsvDN1IQUEu",
-    "Confirmar-password": "hola1234",
-    "id": 5,
-    "image": "img-1636795804205.jpg"
+    "email": "antonio@gmail.com",
+    "password": "$2a$10$VIDujbVaKOpRjl1yYicukubvKM8jxBcWDrIs4/873H0rP6p7kfAp2",
+    "id": 2,
+    "image": "img-1636854497692.jfif"
   }
 ]
