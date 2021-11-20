@@ -1,16 +1,12 @@
 [
- 
   {
-
     "id": 13,
-    "name": "producto13",
-    "color": "...",
-    "talle": "...",
-    "genero": "unisex",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam, eius voluptates fuga odio atque delectus illum quibusdam quasi in minima, repellat esse fugit corrupti quidem necessitatibus aliquam dolorem laboriosam.",
-    "coleccion": "...",
-    "estado": "vistos",
-    "precio": "$3500",
+    "color": "Blanco",
+    "talle": null,
+    "genero": "Hombre",
+    "coleccion": "verano",
+    "estado": "en venta",
+    "precio": null,
     "image": "productos/producto13/producto13-1.webp"
   },
   {

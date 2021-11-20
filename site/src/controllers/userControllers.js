@@ -1,9 +1,11 @@
+let db = require("../database/models")
 const fs = require("fs")
 const path = require("path")
 const {
     validationResult
 } = require('express-validator')
 const bcrypt = require("bcryptjs")
+const usuario = require("../database/models/usuario")
 
 /* const ruta = path.join(__dirname, "..", "data", "user.json")
 let usuariosRegistrados = fs.readFileSync(ruta, "utf-8")
@@ -103,5 +105,55 @@ module.exports = {
         req.session.destroy();
         return res.redirect('/');
     },
+   /*  add: (req, res) => {
+        res.render("register.ejs")
+    }, */
+
+    create: (req, res) => {
+        db.usuario.create(req.body)
+            .then(result => {
+                res.redirect(`/profile/${req.params.id}`)
+            })
+            .catch(err => {
+                res.render("error")
+            })
+
+    },
+    edit: (req,res) => {
+        db.usuario.findByPk(+req.params.id)
+        .then(usuario => {
+            if(usuario) {
+                res.render("editProfile", {usuario})
+            }
+            else {
+                res.send("No existe esa pelicula")
+            }
+        })
+        .catch(err => {
+            res.render("error")
+        })
+    },
+    update: (req,res) => {
+    db.usuario.update(
+        req.body,
+        {
+            where:{id: +req.params.id}
+        }
+    )
+    .then (result => {
+        if (result[0] !== 0){
+            res.redirect(`/profile${+req.params.id}`)
+        }
+        res.send(result)
+    })
+    .catch(err => {
+        res.render("error")
+    })
+    
+    }
+
+
+
+
 
 }

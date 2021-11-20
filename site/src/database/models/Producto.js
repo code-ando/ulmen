@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const product = sequelize.define(
-        "products",
+    const producto = sequelize.define(
+        "producto",
         {
             id:{
                 type: DataTypes.INTEGER,
@@ -12,23 +12,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            color: {
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
-            talle:{
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
-            genero:{
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
-            descripcion:{
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
-            coleccion:{
+            descripcion: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
@@ -36,7 +20,23 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             },
-            id_estado:{
+            id_colores:{
+                type: DataTypes.STRING,
+                allowNull: false,
+            },
+            id_talles:{
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            id_generos:{
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            id_coleccion:{
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            id_categroias:{
                 type: DataTypes.INTEGER,
                 allowNull: false,
             }
@@ -48,5 +48,5 @@ module.exports = (sequelize, DataTypes) => {
         }
 
     ), 
-    return product
+    return producto
 }
