@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const compra = sequelize.define(
-        "compras",
+    const coleccion = sequelize.define(
+        "coleccion",
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -8,20 +8,17 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 autoIncrement: true,
             },
-            cantidad: {
-                type: DataTypes.INTEGER,
+            nombre: {
+                type: DataTypes.STRING,
                 allowNull: false,
             },
-            precio:{
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            }
+          
 
         },
         {
             timestamps = false
         }
     )
-    return compra
+    return coleccion
 
 }

@@ -2,7 +2,7 @@ const router = require('express').Router()
 
 
 /* const validate = require ("../middlewares/validate") */
-const {login, register, agregarUser, processLogin, profile, cerrarSesion} = require('../controllers/userControllers')
+const {login, register, create, processLogin, profile, cerrarSesion,edit,update} = require('../controllers/userControllers')
 const { json } = require('express')
 const imagenUser = require('../middlewares/userstorage')
 const guestUser = require('../middlewares/guestUser')
@@ -11,7 +11,12 @@ const validateRegister = require('../middlewares/validateRegister')
 
 //Register
 router.get('/register',guestUser, register)
-router.post('/register', imagenUser.single('image'), validateRegister,agregarUser)
+router.post('/register', imagenUser.single('image'), validateRegister,create)
+
+//editar perfil
+
+router.get('/editProfile/:id/',validateRegister, edit)
+router.put('/editProfile/:id/',update )
 
 //Login
 router.get('/login',guestUser, login)
