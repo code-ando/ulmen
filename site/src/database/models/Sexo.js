@@ -1,23 +1,30 @@
 module.exports = (sequelize, DataTypes) => {
-    const sexo = sequelize.define(
-        "sexo",
-        {
-            id: {
-                type: DataTypes.INTEGER,
-                primaryKey: true,
-                allowNull: false,
-                autoIncrement: true,
-            },
-            nombre: {
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
 
+    let alias = "sexo"
+    let cols = {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true,
         },
-        {
-            timestamps = false
-        }
-    )
+        nombre: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+    }
+    let config = {
+        timestamps = false
+    }
+    const sexo = sequelize.define(alias, cols, config)
+
+    sexo.associate = function (models) {
+        sexo.hasMany(models.usuario, {
+            foreignKey: "id_sexo",
+            as: "usuario"
+        })
+    }
     return sexo
 
 }
