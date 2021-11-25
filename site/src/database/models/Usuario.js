@@ -45,10 +45,10 @@ module.exports = (sequelize, DataTypes) => {
 
     }
     let config = {
-        timestamps: false
+        timestamps : false
     }
     const usuario = sequelize.define(alias, cols, config);
-    
+
     usuario.associate = function (models) {
         usuario.belongsTo(models.sexo, {
             foreignKey: "id_sexo",

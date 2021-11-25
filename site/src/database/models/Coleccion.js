@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }
     let config = {
-        timestamps = false
+        timestamps : false
     }
     const coleccion = sequelize.define(alias, cols, config)
 

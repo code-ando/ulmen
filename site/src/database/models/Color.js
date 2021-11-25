@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }
     let config = {
-        timestamps = false
+        timestamps : false
     }
     const color = sequelize.define(alias, cols, config)
 
