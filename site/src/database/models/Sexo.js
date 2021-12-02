@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "sexo"
+    let alias = "Sexo"
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps : false
     }
-    const sexo = sequelize.define(alias, cols, config)
+    const Sexo = sequelize.define(alias, cols, config)
 
-    sexo.associate = function (models) {
-        sexo.hasMany(models.usuario, {
+    Sexo.associate = function (models) {
+        Sexo.hasMany(models.Usuario, {
             foreignKey: "id_sexo",
             as: "usuario"
         })
     }
-    return sexo
+    return Sexo
 
 }

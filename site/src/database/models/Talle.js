@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "talle"
+    let alias = "Talle"
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -17,15 +17,15 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps : false
     }
-    const talle = sequelize.define(alias, cols, config)
+    const Talle = sequelize.define(alias, cols, config)
 
-    talle.associate = function (models) {
-        talle.hasMany(models.producto, {
+    Talle.associate = function (models) {
+        Talle.hasMany(models.Producto, {
             foreignKey: "id_talles",
             as: "producto"
         })
     }
     
-    return talle
+    return Talle
 
 }

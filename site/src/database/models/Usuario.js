@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "usuario"
+    let alias = "Usuario"
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -47,23 +47,22 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps : false
     }
-    const usuario = sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
 
-    usuario.associate = function (models) {
-        usuario.belongsTo(models.sexo, {
+    Usuario.associate = function (models) {
+        Usuario.belongsTo(models.Sexo, {
             foreignKey: "id_sexo",
             as: "sexo"
         })
-    }
-    
-    usuario.associate = function (models) {
-        usuario.belongsTo(models.rol, {
+        Usuario.belongsTo(models.Rol, {
             foreignKey: "id_rol",
             as: "rol"
         })
     }
+    
+   
 
 
 
-    return usuario
+    return Usuario
 }
