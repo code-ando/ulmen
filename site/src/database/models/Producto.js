@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "producto";
+    let alias = "Producto";
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -48,39 +48,31 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    const producto = sequelize.define(alias, cols, config);
+    const Producto = sequelize.define(alias, cols, config);
 
-    producto.associate = function (models) {
-        producto.belongsTo(models.color, {
+    Producto.associate = function (models) {
+        Producto.belongsTo(models.Color, {
             foreignKey: "id_colores",
             as: "color"
         })
-    }
-    producto.associate = function (models) {
-        producto.belongsTo(models.talle, {
+        Producto.belongsTo(models.Talle, {
             foreignKey: "id_talle",
             as: "talles"
         })
-    }
-    producto.associate = function (models) {
-        producto.belongsTo(models.genero, {
+        Producto.belongsTo(models.Genero, {
             foreignKey: "id_generos",
             as: "genero"
         })
-    }
-    producto.associate = function (models) {
-        producto.belongsTo(models.coleccion, {
+        Producto.belongsTo(models.Coleccion, {
             foreignKey: "id_coleccion",
             as: "coleccion"
         })
-    }
-    producto.associate = function (models) {
-        producto.belongsTo(models.categoria, {
+        Producto.belongsTo(models.Categoria, {
             foreignKey: "id_categorias",
             as: "categoria"
         })
     }
 
 
-    return producto
+    return Producto
 }

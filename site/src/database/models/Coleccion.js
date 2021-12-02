@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "coleccion"
+    let alias = "Coleccion"
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -18,14 +18,14 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps : false
     }
-    const coleccion = sequelize.define(alias, cols, config)
+    const Coleccion = sequelize.define(alias, cols, config)
 
-    coleccion.associate = function (models) {
-        coleccion.hasMany(models.producto, {
+    Coleccion.associate = function (models) {
+        Coleccion.hasMany(models.Producto, {
             foreignKey: "id_coleccion",
             as: "producto"
         })
     }
-    return coleccion
+    return Coleccion
 
 }
