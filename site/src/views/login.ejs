@@ -21,8 +21,8 @@
                 <input type="checkbox" name="recordarme" id="checkbox">
                 <label for="recordarme">Recordarme</label>
             </div>
-            <% if (locals.errors && errors.msg) { %> 
-                <small> <%= errors.msg %>  </small>
+            <% if (locals.errors && errors.email.msg) { %> 
+                <small> <%= errors.email.msg %>  </small>
                 <% } %> 
             <div class="botones">
                 <button class="enviar" type="submit">Ingresar</button>

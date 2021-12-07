@@ -6,14 +6,14 @@ const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session')
 const recordame = require('./middlewares/cookieRecordame')
-
+const usuarioLogin = require('./middlewares/usuarioLogin')
 
 
 const main = require('./routes/main')
 const products = require('./routes/products')
 const user = require('./routes/user')
 const adminRouter = require('./routes/admin')
-const usuarioLogin = require('./middlewares/usuarioLogin');
+
 
 const app = express();
 
