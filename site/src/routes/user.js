@@ -23,3 +23,5 @@ router.get('/profile', userAuth, profile)
 router.get('/cerrarSesion', cerrarSesion)
 
 module.exports = router
+
+/* localhost:3030/user/login */ 

@@ -47,11 +47,15 @@ module.exports = {
     },
     processLogin: (req, res) => {
         let errors = validationResult(req)
+        
         const { email } = req.body
         if (errors.isEmpty()) {
             db.Usuarios.findOne({
-                where: { email }
+                where: {
+                    email
+                }
             }).then(usuario => {
+                
                 req.session.usuarioLogin = {
                     id: usuario.id,
                     nombre: usuario.nombre,
@@ -61,6 +65,7 @@ module.exports = {
 
             }).catch(error => console.log(error))
         } else {
+            
             return res.render("login", {
                 errors:errors.mapped()
             })
