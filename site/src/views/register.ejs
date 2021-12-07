@@ -24,12 +24,18 @@
                     <small> <%= errors.DNI.msg %> </small>
                 <% } %>
     
-                <input type="date" name="Fecha-de-nacimiento" >
+                <input type="date" name="nacimiento" >
 
                 <select name="Sexo" >
                     <option selected>Selecciona la tu sexo</option>
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                </select>
+
+                <select name="Rol" >
+                    <option selected>Selecciona la tu rol</option>
+                    <option value="1">Admin</option>
+                    <option value="2">User</option>
                 </select>
                 
 

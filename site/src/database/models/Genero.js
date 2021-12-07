@@ -20,9 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     const Genero = sequelize.define(alias, cols, config)
 
     Genero.associate = function (models) {
-        Genero.hasMany(models.Producto, {
-            foreignKey: "id_generos",
-            as: "producto"
+        Genero.hasMany(models.Usuarios, {
+            foreignKey: "id_genero",
+            as: "usuario"
         })
     }
 
