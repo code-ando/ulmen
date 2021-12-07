@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "Usuario"
+    let alias = "Usuarios"
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -33,13 +33,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        id_sexo: {
+        id_genero: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
         id_rol: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
 
 
@@ -47,14 +47,14 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps : false
     }
-    const Usuario = sequelize.define(alias, cols, config);
+    const Usuarios = sequelize.define(alias, cols, config);
 
-    Usuario.associate = function (models) {
-        Usuario.belongsTo(models.Sexo, {
-            foreignKey: "id_sexo",
-            as: "sexo"
+    Usuarios.associate = function (models) {
+        Usuarios.belongsTo(models.Genero, {
+            foreignKey: "id_genero",
+            as: "genero"
         })
-        Usuario.belongsTo(models.Rol, {
+        Usuarios.belongsTo(models.Rol, {
             foreignKey: "id_rol",
             as: "rol"
         })
@@ -64,5 +64,5 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-    return Usuario
+    return Usuarios
 }

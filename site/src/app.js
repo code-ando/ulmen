@@ -13,7 +13,7 @@ const main = require('./routes/main')
 const products = require('./routes/products')
 const user = require('./routes/user')
 const adminRouter = require('./routes/admin')
-const userLogueado = require('./middlewares/userLogueado');
+const usuarioLogin = require('./middlewares/usuarioLogin');
 
 const app = express();
 
@@ -33,7 +33,7 @@ app.use(session({
   saveUninitialized : false,
 }))
 app.use(recordame) 
-app.use(userLogueado)
+app.use(usuarioLogin)
 
 
 app.use('/', main)
