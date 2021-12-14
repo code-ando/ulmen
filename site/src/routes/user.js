@@ -1,3 +1,4 @@
+const express = require('express');
 const router = require('express').Router()
 const {login, register, processLogin, profile, cerrarSesion,update,agregarUser} = require('../controllers/userControllers')
 const imagenUser = require('../middlewares/userstorage')
@@ -12,16 +13,14 @@ router.post('/register', imagenUser.single('image'), validateRegister,agregarUse
 
 //editar perfil
 
-router.get('/editProfile/:id/', profile)
-router.put('/editProfile/:id/',validateRegister, update )
+router.get('/profile', userAuth, profile)
+router.put('/update',imagenUser.single('image'), update )
 
 //Login
 router.get('/login',guestUser, login)
 router.post('/login',validateLogin, processLogin)
 
-router.get('/profile', userAuth, profile)
+
 router.get('/cerrarSesion', cerrarSesion)
 
 module.exports = router
-
-/* localhost:3030/user/login */ 
