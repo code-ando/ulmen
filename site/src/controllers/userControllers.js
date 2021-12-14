@@ -12,6 +12,16 @@ module.exports = {
     login: (req, res) => {
         res.render('login')
     },
+    profile: (req, res) => {
+        db.Usuarios.findByPk(req.session.usuarioLogin.id)
+            .then(usuario => {
+                return res.render("profile", {
+                    usuario
+                })
+            }).catch(err => {
+                res.render("errors")
+            })
+    },
     agregarUser: (req, res) => {
         const errors = validationResult(req)
         let { Nombre, Apellido, email, password, DNI, nacimiento, Sexo, Rol } = req.body
@@ -72,24 +82,13 @@ module.exports = {
         }
 
     },
-    profile: (req, res) => {
-        db.Usuarios.findByPk(req.session.usuarioLogin.id)
-            .then(usuario => {
-                return res.render("profile", {
-                    usuario
-                })
-            }).catch(err => {
-                res.render("errors")
-            })
-    },
+    
     update: (req, res) => {
-        const { Nombre, password } = req.body
+        const {Nombre,contraseña} = req.body
         db.Usuarios.update(
             {
                 nombre: Nombre.trim(),
-                apellido: Apellido.trim(),
-                id_genero: Sexo.trim(),
-
+                
             },
             {
                 where: {
@@ -97,11 +96,11 @@ module.exports = {
                 }
             }
         ).then(() => {
-            if (password) {
-                console.log("password=>", password)
+            if (contraseña) {
+                console.log("contraseña=>", contraseña)
                 db.Usuarios.update(
                     {
-                        password: bcrypt.hashSync(password.trim(), 10)
+                        contraseña: bcrypt.hashSync(contraseña.trim(), 10)
                     },
                     {
                         where: {
