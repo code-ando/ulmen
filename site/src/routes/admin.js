@@ -3,13 +3,13 @@ const router = express.Router();
 const imagenProduct = require('../middlewares/productstorage')
 
 
-const {list,detail,create,store,edit,update,destroy } = require("../controllers/adminController")
+const {list,detail,create,store,edit,update,destroy} = require("../controllers/adminController")
 
 
 
 /* GET users listing. */
 
-router.get('/admin', list)
+router.get('/', list)
 
 //Creacion de producto
 router.get('/create', create)
@@ -23,7 +23,7 @@ router.get('/edit/:id',edit)
 router.put('/edit/:id',imagenProduct.single('image'),update)
 
 //borrar un producto
-router.delete('/:id', destroy)
+router.delete('/:id',destroy)
 
 
 

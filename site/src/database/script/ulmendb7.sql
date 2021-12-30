@@ -151,19 +151,19 @@ CREATE TABLE `producto` (
   `precio` int NOT NULL,
   `id_colores` int NOT NULL,
   `id_talles` int NOT NULL,
-  `id_generos` int NOT NULL,
+  `id_sexo` int NOT NULL,
   `id_coleccion` int NOT NULL,
-  `id_categorias` int NOT NULL,
+  `id_categoria` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_categorias_idx` (`id_categorias`),
-  KEY `fk_generos_idx` (`id_generos`),
+  KEY `fk_categorias_idx` (`id_categoria`),
+  KEY `fk_generos_idx` (`id_sexo`),
   KEY `fk_colores_idx` (`id_colores`),
   KEY `fk_talles_idx` (`id_talles`),
   KEY `fk_coleccion_idx` (`id_coleccion`),
-  CONSTRAINT `fk_categorias` FOREIGN KEY (`id_categorias`) REFERENCES `categoria` (`id`),
+  CONSTRAINT `fk_categorias` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`),
   CONSTRAINT `fk_coleccion` FOREIGN KEY (`id_coleccion`) REFERENCES `coleccion` (`id`),
   CONSTRAINT `fk_colores` FOREIGN KEY (`id_colores`) REFERENCES `color` (`id`),
-  CONSTRAINT `fk_generos` FOREIGN KEY (`id_generos`) REFERENCES `genero` (`id`),
+  CONSTRAINT `fk_generos` FOREIGN KEY (`id_sexo`) REFERENCES `genero` (`id`),
   CONSTRAINT `fk_talles` FOREIGN KEY (`id_talles`) REFERENCES `talle` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -251,13 +251,13 @@ INSERT INTO `talle` VALUES (1,'Small'),(2,'Medium'),(3,'Large'),(4,'Extra large'
 UNLOCK TABLES;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuario` (
+CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
@@ -272,18 +272,22 @@ CREATE TABLE `usuario` (
   KEY `fk_sexo_idx` (`id_genero`),
   CONSTRAINT `fk_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`),
   CONSTRAINT `fk_sexo` FOREIGN KEY (`id_genero`) REFERENCES `sexo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `usuarios`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (5,'Juan','Perez','juanperez@gmail.com','12345678',34566234,'1997-12-08',2,3),(6,'Mario','Castro','mariocastro@gmail.com','12345678',34545124,'1987-11-03',1,2),(7,'Ruben','Paz','rubenpaz@gmail.com','12345678',31895124,'1977-07-01',1,1),(8,'Marcos','Gerez','marcosgerez@gmail.com','12345678',23890114,'1991-09-21',1,3),(9,'Pedro','Silva','pedrosilva@gmail.com','12345678',23897761,'1995-11-12',2,1),(10,'Gabriel','Mansilla','gabrielmansilla@gmail.com','123456789',34897764,'1974-03-08',1,1),(11,'Matias','Castro','matiascastro@gmail.com','123456789',40678543,'1995-10-02',2,1),(12,'Jose','Perales','joseperales@gmail.com','123456789',34677643,'1967-12-09',2,3),(13,'Diego','Romano','diegoromano@gmail.com','123456789',23453987,'1990-04-02',3,3),(14,'Elias','Ruiz','eliasruiz@gmail.com','123456789',40421984,'1993-07-12',1,3),(15,'Carlos','Lopez','carloslopez@gmail.com','123456789',37473981,'1984-05-30',2,1),(16,'Ramiro','Martinez','ramiromartinez@gmail.com','123456789',29435982,'1991-07-31',3,1),(17,'Gabriel','Falcon','gabrielfalcon@gmail.com','123456789',46435008,'2001-05-23',1,1),(18,'Pablo','Araujo','pabloaraujo@gmail.com','123456789',23435508,'2000-06-18',2,1),(19,'Roman','Hernandez','romanhernandez@gmail.com','123456789',39876121,'1989-07-12',2,3),(20,'Pedro','Coronel','pedrocoronel@gmail.com','123456789',39847169,'1985-01-03',1,3),(21,'Gonzalo','Rivas','gonzalorivas@gmail.com','123456789',31832164,'1981-04-22',1,2),(22,'Luis','Pasos','luispasos@gmail.com','123456789',21832278,'1976-02-15',2,2);
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (5,'Juan','Perez','juanperez@gmail.com','12345678',34566234,'1997-12-08',2,3),(6,'Mario','Castro','mariocastro@gmail.com','12345678',34545124,'1987-11-03',1,2),(7,'Ruben','Paz','rubenpaz@gmail.com','12345678',31895124,'1977-07-01',1,1),(8,'Marcos','Gerez','marcosgerez@gmail.com','12345678',23890114,'1991-09-21',1,3),(9,'Pedro','Silva','pedrosilva@gmail.com','12345678',23897761,'1995-11-12',2,1),(10,'Gabriel','Mansilla','gabrielmansilla@gmail.com','123456789',34897764,'1974-03-08',1,1),(11,'Matias','Castro','matiascastro@gmail.com','123456789',40678543,'1995-10-02',2,1),(12,'Jose','Perales','joseperales@gmail.com','123456789',34677643,'1967-12-09',2,3),(13,'Diego','Romano','diegoromano@gmail.com','123456789',23453987,'1990-04-02',3,3),(14,'Elias','Ruiz','eliasruiz@gmail.com','123456789',40421984,'1993-07-12',1,3),(15,'Carlos','Lopez','carloslopez@gmail.com','123456789',37473981,'1984-05-30',2,1),(16,'Ramiro','Martinez','ramiromartinez@gmail.com','123456789',29435982,'1991-07-31',3,1),(17,'Gabriel','Falcon','gabrielfalcon@gmail.com','123456789',46435008,'2001-05-23',1,1),(18,'Pablo','Araujo','pabloaraujo@gmail.com','123456789',23435508,'2000-06-18',2,1),(19,'Roman','Hernandez','romanhernandez@gmail.com','123456789',39876121,'1989-07-12',2,3),(20,'Pedro','Coronel','pedrocoronel@gmail.com','123456789',39847169,'1985-01-03',1,3),(21,'Gonzalo','Rivas','gonzalorivas@gmail.com','123456789',31832164,'1981-04-22',1,2),(22,'Luis','Pasos','luispasos@gmail.com','123456789',21832278,'1976-02-15',2,2),(23,'Diego','Diaz','diegocarlosdiaz5@gmail.com','$2a$10$Fi.oarkpnWBCLIC9sNKog.HNqGUEi5b.et6Geofut6YqoIhg2yMaC',40664184,'2021-12-18',1,2),(24,'Diego','Diaz','diegocarsassdlosdiaz5@gmail.com','$2a$10$PawN8mUv0nsDeEBD81ANXuLC13vvw1X1mKE7k94ft1/9AAt5FAFbG',40664184,'2021-12-17',1,1),(25,'Diego','Diaz','diegocsdsarlosdiaz5@gmail.com','$2a$10$NJbqC8WjXTF3yWNG29nMteNWYncwDLELMXiTLy.SUqGkAlCJ92pfC',40664184,'2021-12-04',1,1),(26,'pedro','hola','pedrooo@gmail.com','$2a$10$qX9bBEoat2nzfqeT8E5i2eZn8lmvPyBPTYgtZVgqlo9smi16rp1Yi',12345678,'2011-07-08',2,1),(27,'Diego','Diaz','djej22@gmail.com','$2a$10$dUoP.t4RA1wBEXP8UHWvxOvkqKlN/6xNr6ezPrXhDopvWZ3MxA.wy',12345678,'2021-12-03',2,1),(28,'Mati','Perwz','pppp@gmail.com','$2a$10$78LWT9Ah.7d./vnXOwSzjemNcmTQeCEmOIswdSk9gKDB8TFEo0a5y',123456789,'2021-12-19',1,2),(29,'Diego','Diaz','aaa@gmail.com','$2a$10$wLmjYyFrlEvA/rsqcowqqux7axbSzL2JUdSFM2Nn7Mdwx8KfjM8/C',40664184,'2021-12-22',1,2),(30,'Diego','Diaz','qqqqq@gmail.com','$2a$10$Y80ydAlz5FKU61OpK6WLPeKkgPnXTo9OYTyYvd.eXvOY2wzVzmhYO',11111111,'2021-12-22',1,2),(31,'Diego','Diaz','diego@gmail.com','$2a$10$k4SXXWWx46.rg.LV6D4FK.k8/ZBxyFUd3tW99ozFLyMUTQgMjorn6',40664184,'2021-12-18',1,1),(32,'Diego','Diaz','weeeee@gmail.com','$2a$10$pWLiikGSITlr/D.LAJiwROSOguUE7rLmLRty10mSEcR1TAqU4VGBW',12345678,'2021-12-11',1,1),(33,'Diego','Diaz','diegocarlosdiaz5@gmail.comsssdsd','$2a$10$VyEv1YdY6aHtzSHX2BdwEeA9G4WsRqjS0XBtyCR2WNZb7lkQ0me6q',40664184,'2021-12-10',1,1),(34,'Diego','Diaz','fgfdgf@gmail.com','$2a$10$VC.wgXBzl9fsgNup9WUD3.PRHMTL2fbTLFiEiokkWp2TnJrYyZ.96',40664184,'2021-12-31',1,1),(35,'Diego','Diaz','uikhjkjh@gmail.com','$2a$10$x0hluBpbRlhRzafD5Evz6e8NtitOQYpo5XfPS/uGxx5CFdEtEG/uq',40664184,'2021-12-11',1,1),(36,'Diego','Diaz','diegocaxcxclosdiaz5@gmail.com','$2a$10$RaPfCvPi3S93VCXisi2eJ.5pu.y5d6fLPfduL2e7G5AnOhXb1xemi',40664184,'2021-12-23',2,1),(37,'Diego','Diaz','sdsds@gmail.com','$2a$10$o7LB/LIjEE7ZYCRkXnyRKuBY1.PbedX/XOq.AcdQuam5TXjx6Sg56',40664184,'2021-12-30',1,1),(38,'mati','pacheco','sesed@gmail.com','$2a$10$Cu/h1Q1hIptTFVuuDr.4sem8PVtMXqLS/JodLAsQoslFo5yhYywZ6',12345678,'2021-12-10',2,2),(39,'Diego','Diaz','diegocarlosdiaz5@gmail.aaa','$2a$10$eT9LyrjM2pVBbnSR9TlvQuUFVPodCOxvy/kcnpnIYeRJZf36pAOF6',40664184,'2021-12-09',1,2);
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'ulmen'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -294,4 +298,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-04 23:23:53
+-- Dump completed on 2021-12-30 20:46:43

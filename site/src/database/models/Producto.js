@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        id_categroias: {
+        id_categoria: {
             type: DataTypes.INTEGER,
             allowNull: false,
         }
@@ -45,7 +45,9 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config =
     {
+        tableName: "producto",
         timestamps: false
+
     }
 
     const Producto = sequelize.define(alias, cols, config);
@@ -56,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
             as: "color"
         })
         Producto.belongsTo(models.Talle, {
-            foreignKey: "id_talle",
+            foreignKey: "id_talles",
             as: "talles"
         })
         Producto.belongsTo(models.Sexo, {
@@ -68,8 +70,8 @@ module.exports = (sequelize, DataTypes) => {
             as: "coleccion"
         })
         Producto.belongsTo(models.Categoria, {
-            foreignKey: "id_categorias",
-            as: "categoria"
+            foreignKey: "id_categoria",
+            as: "Categoria"
         })
     }
 
