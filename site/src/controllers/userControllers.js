@@ -30,7 +30,7 @@ module.exports = {
                 nombre: Nombre.trim(),
                 apellido: Apellido.trim(),
                 email: email.trim(),
-                contraseña: bcrypt.hashSync(password, 10),
+                contraseña: bcrypt.hashSync(password, 12),
                 DNI: DNI.trim(),
                 nacimiento: nacimiento.trim(),
                 id_genero: Sexo.trim(),
@@ -100,7 +100,7 @@ module.exports = {
                 console.log("contraseña=>", contraseña)
                 db.Usuarios.update(
                     {
-                        contraseña: bcrypt.hashSync(contraseña.trim(), 10)
+                        contraseña: bcrypt.hashSync(contraseña.trim(), 12)
                     },
                     {
                         where: {

@@ -6,63 +6,84 @@
     <%- include('./partials/header') %>
 
     <main>
-
-        <form class="formularios" action="/register" method="POST" enctype="multipart/form-data">
-            <div class="form">
-                <input type="text" name="Nombre" placeholder="Juan" value="<%= locals.old && old.Nombre ? old.Nombre : null %>">
+        
+        <form class="formularios" id="formularios" action="/register" method="POST" enctype="multipart/form-data">
+            <div class="form" id="for">
+                
+                <input type="text" name="Nombre" id="Nombre" placeholder="Juan" value="<%= locals.old && old.Nombre ? old.Nombre : null %>">
+                <span id="erroresNombre" style="color: red;"></span> <br>
                 <%if (locals.errors && errors.Nombre) {%>
-                    <small> <%= errors.Nombre.msg %> </small>
+                    <small class="error"> <%= errors.Nombre.msg %> </small>
                 <% } %>
 
-                <input type="text" name="Apellido" placeholder="Gonzalez" value="<%= locals.old && old.Apellido ? old.Apellido : null %>">
+                <input type="text" name="Apellido" id="Apellido" placeholder="Gonzalez" value="<%= locals.old && old.Apellido ? old.Apellido : null %>">
+                <span id="erroresApellido" style="color: red;"></span> <br>
                 <%if (locals.errors && errors.Apellido) {%>
-                    <small> <%= errors.Apellido.msg %> </small>
+                    <small class="error"> <%= errors.Apellido.msg %> </small>
                 <% } %>
 
-                <input type="text" name="DNI" placeholder="D.N.I." value="<%= locals.old && old.DNI ? old.DNI : null %>">
+                <input type="text" name="DNI" id="DNI" placeholder="D.N.I." value="<%= locals.old && old.DNI ? old.DNI : null %>">
+                <span id="erroresDNI" style="color: red;"></span> <br>
                 <%if (locals.errors && errors.DNI) {%>
-                    <small> <%= errors.DNI.msg %> </small>
+                    <small class="error"> <%= errors.DNI.msg %> </small>
                 <% } %>
+                
+            
     
-                <input type="date" name="nacimiento" >
+                <input type="date" name="Nacimiento" id="Nacimiento"  placeholder="Nacimiento" value="<%= locals.old && old.Nacimiento ? old.Nacimiento : null %>">
+                <span id="erroresNacimiento" style="color: red;"></span> <br>
+                <%if (locals.errors && errors.Nacimiento) {%>
+                    <small class="error"> <%= errors.Nacimientomsg %> </small>
+                <% } %>
+
 
                 <select name="Sexo" >
-                    <option selected>Selecciona la tu sexo</option>
-                    <option value="1">Hombre</option>
-                    <option value="2">Mujer</option>
+                    <option selected>Selecciona tu sexo</option>
+                    <option value="select 1">Hombre</option>
+                    <option value="select 2">Mujer</option>
+                </select>
+                
+
                 </select>
 
-                <select name="Rol" >
+                <select name="Rol" id="Rol" >
                     <option selected>Selecciona la tu rol</option>
                     <option value="1">Admin</option>
                     <option value="2">User</option>
                 </select>
                 
 
-                <input type="email" name="email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.email ? old.email : null %>">
-                <%if (locals.errors && errors.email) {%>
-                    <small> <%= errors.email.msg %> </small>
+                <input type="mail" name="Email" id="Email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.email ? old.email : null %>">
+                <span id="erroresEmail" style="color: red;"></span> <br>
+                <%if (locals.errors && errors.Email) {%>
+                    <small class="error"> <%= errors.Email.msg %> </small>
                 <% } %>
 
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="Password" name="Password" id="Password" placeholder="Contraseña">
+                <span id="erroresPassword" style="color: red;"></span> <br>
                 <%if (locals.errors && errors.password) {%>
-                    <small> <%= errors.password.msg %> </small>
+                    <small class="error"> <%= errors.password.msg %> </small>
 
-                    
+                
                 <% } %>  
+                
             </div>
+             
+
             <div class="image">
-                <input name="image" type="file">
+                <input name="Image"  id="Image" type="file">
             </div>
             <div class="botones">
                 <button class="enviar" type="submit">Enviar</button>
-                <small><a href="/login">¿Ya tienes cuenta? Ingresa aqui</a></small>
+                <small ><a href="/login">¿Ya tienes cuenta? Ingresa aqui</a></small>
             </div>
+                
         </form>
 
     </main>
 
     <%- include('./partials/footer') %>
+    <script src="../js/validationRegister.js"></script>
 </body>
 
 </html>
