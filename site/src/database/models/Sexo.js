@@ -19,13 +19,15 @@ module.exports = (sequelize, DataTypes) => {
         timestamps : false
     }
     const Sexo = sequelize.define(alias, cols, config)
-
+    
     Sexo.associate = function (models) {
-        Sexo.hasMany(models.Producto, {
+        Sexo.hasMany(models.Usuarios, {
             foreignKey: "id_sexo",
-            as: "producto"
+            as: "usuario"
         })
     }
+
+  
     return Sexo
 
 }

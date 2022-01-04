@@ -1,6 +1,9 @@
 const router = require('express').Router()
 const path = require('path')
-const {productDetail,productCart,productos} = require('../controllers/productsControllers')
+const {productFilter, productDetail,productCart,productos} = require('../controllers/productsControllers')
+
+
+router.get('/productfilter',productFilter)
 
 router.get('/productDetail', productDetail)
 

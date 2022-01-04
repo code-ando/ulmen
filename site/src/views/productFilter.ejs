@@ -8,26 +8,8 @@
     <%- include('./partials/header') %>
 
     <main>
-        <div class="slider">
-            <ul>
-
-                <li><img src="/images/negra.jpg" alt=""></li>
-                <li><img src="/images/negra1.png" alt=""></li>
-                <li><img src="/images/negra2.png" alt=""></li>
-            </ul>
-        </div>
-
-        <section class="lanzamiento">
-            <h1>¿PARA QUIEN COMPRAS?</h1>
-            <div class="row">
-                <a href="/productFilter?genero=2"><img src="/images/mujer1.jpg" alt=""></a>
-                <a href="/productFilter?genero=1"><img src="/images/hombre.jpg" alt=""></a>
-                <a href="/productFilter?genero=4"><img src="/images/nino.jpg" alt=""></a>
-            </div>
-        </section>
-
         <section class="vistos">
-            <h2>LOS MAS VISTOS</h2>
+            <h2><%= nombre %> </h2>
             <div class="container">
                 <%productos.forEach(producto =>{%>
                 <div class="product">
