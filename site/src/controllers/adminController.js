@@ -1,4 +1,4 @@
-const { Producto, Categoria } = require('../database/models');
+const { Producto, Categoria, Talle, Sexo, Coleccion, Color, Imagen } = require('../database/models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -10,8 +10,8 @@ module.exports = {
         /* Muestra todos los productos */
         list : async (req,res) => {
             try{
-                const products = await Producto.findAll({include: ['Categoria']});
-                res.render('admin/admin', { products, toThousand });
+                const productos = await Producto.findAll({include: [{all : true}]});
+                res.render('admin/admin', { productos, toThousand });
             } catch(error){
                 console.log(error);
             }
@@ -34,8 +34,18 @@ module.exports = {
 
     create: async (req,res) => {
         try {                
-            const categories = await Categoria.findAll();
-            res.render('admin/create', {categories});          
+            const categorias = await Categoria.findAll();
+            const talles = await Talle.findAll();
+            const generos = await Sexo.findAll();
+            const colecciones = await Coleccion.findAll();
+            const colores = await Color.findAll();
+            res.render('admin/create', {
+                categorias,
+                talles,
+                generos,
+                colecciones,
+                colores
+            });          
             }
         catch(error) {
             console.log(error);
@@ -45,20 +55,28 @@ module.exports = {
 
     store: async (req, res, next) => {
         let results = validationResult(req);
-        console.log(req.body);
-        let categories
-        try {
-            categories = await Categoria.findAll();
-        } catch (error) {
-            console.log(error);
-        }
+        const {nombre, precio, categoria, color, descripcion, coleccion, genero, talle} = req.body;
         if (results.isEmpty()) {
+
             try {
-                await Producto.create({
-                    ...req.body,
-                    image : req.file.filename
+                let producto = await Producto.create({
+                    nombre,
+                    precio,
+                    id_categoria : categoria,
+                    id_colores : color,
+                    id_talles : talle,
+                    id_sexo : genero,
+                    id_coleccion : coleccion,
+                    descripcion
                 });
-                res.redirect('admin');
+
+                if(req.file){
+                    await Imagen.create({
+                        nombre : req.file.filename,
+                        productos_id : producto.id
+                    })
+                }
+                res.redirect('/admin');
             } catch (error) {
                 console.log(error);
             }
@@ -71,9 +89,21 @@ module.exports = {
     edit: async (req,res) => {
         try {          
             const { id } = req.params;
-            const productDetail = await Product.findByPk(id, {include: ['Categoria']});
+            const product = await Producto.findByPk(id, {include: [{all: true}]});
             const categories = await Categoria.findAll();
-            res.render('admin/edit', { productDetail, toThousand, categories });
+            const talles = await Talle.findAll();
+            const generos = await Sexo.findAll();
+            const colecciones = await Coleccion.findAll();
+            const colores = await Color.findAll();
+            res.render('admin/edit', { 
+                product, 
+                toThousand, 
+                categories,
+                colores,
+                talles,
+                colecciones,
+                generos
+            });
         } catch(error) {
             console.log(error);
         }
@@ -82,37 +112,82 @@ module.exports = {
     //update - metodo para editar
 
     update: async (req, res, next) => {
+
         let results = validationResult(req);
-        let productDetail
+        let productDetail;
+        const {title, color, talle, genero, coleccion, precio} = req.body;
+        const {id} = req.params;
+
         try {
-            const {id} = req.params;
             productDetail = await Producto.findByPk(id, {include: {all: true}});  
-            categories = await Categoria.findAll();    
         } catch (error) {
             console.log(error);
         }
         if (results.isEmpty()) {
             try {
-                if (req.body.image == undefined) {
-                    //si viene indefinido el campo de imagen, almacena la misma imagen que ya tenia
-                    await productDetail.update({
-                        ...req.body,
-                        image: productDetail.image
-                    })
-                    res.redirect('/productDetail')                    
-                } else {
-                    //si viene una nueva imagen en la edicion, se almacena la nueva imagen
-                    await productDetail.update({
-                        ...req.body,
-                        image: req.file.filename
-                    })
-                    res.redirect('/admin')
-                }
+                await Producto.update(
+                    {
+                        title,
+                        id_colores : color,
+                        id_talles : talle,
+                        id_sexo : genero,
+                        id_coleccion : coleccion,
+                        precio 
+                    },
+                    {
+                        where : {
+                            id 
+                        }
+                    }
+                )
+
+                if (req.file) {
+
+                    if(productDetail.imagenes[0]){
+                        await Imagen.update(
+                            {
+                                nombre : req.file.filename
+                            },
+                            {
+                                where : {
+                                    productos_id : id
+                                }
+                            }
+                        )
+
+                    }else{
+                        await Imagen.create({
+                            nombre : req.file.filename,
+                            productos_id : productDetail.id
+                        })
+                    }
+
+                } 
+                return res.redirect('/admin')
+
             } catch (error) {
                 console.log(error);
             }
         } else {
-            res.render('admin/edit', {productDetail, errors: results.errors});
+
+            const { id } = req.params;
+            const product = await Producto.findByPk(id, {include: [{all: true}]});
+            const categories = await Categoria.findAll();
+            const talles = await Talle.findAll();
+            const generos = await Sexo.findAll();
+            const colecciones = await Coleccion.findAll();
+            const colores = await Color.findAll();
+            res.render('admin/edit', { 
+                product, 
+                toThousand, 
+                categories,
+                colores,
+                talles,
+                colecciones,
+                generos,
+                errors: results.errors
+
+            });
         }
     }, 
 
@@ -121,11 +196,13 @@ module.exports = {
     destroy: async (req, res) => {
         try {
             const {id} = req.params;
-            const product = await Producto.findByPk(id);
-            await product.destroy();
-            res.redirect('admin');
+            await Producto.destroy({
+                where : {
+                    id
+                }
+            });
+            res.redirect('/admin');
         } catch (error) {
-            res.render(error);
             console.log(error);
         }
     }, 

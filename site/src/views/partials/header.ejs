@@ -12,7 +12,7 @@
 
         <ul class="menu">
             <div class="icon">
-                <% if (locals.logueado) {%>
+                <% if (locals.usuarioLogin) {%>
                 <li>
                     <form action="/cerrarSesion" method="get">
                     <div class="botones">
@@ -21,6 +21,11 @@
                 </form
                 ></li>
                 <li><a href="profile"><i class="fas fa-user-circle"></i></a></li>
+                <% if (locals.usuarioLogin.rol == 1) { %>
+                    <li><a href="admin"><i class="fas fa-user-cog"></i></a></li>
+
+                <% } %>
+
                 <% } else {%>
                 <li><a href="login"><i class="far fa-user"></i></a></li>
                 <li><a href="register"><i class="fas fa-sign-in-alt"></i></a></li>

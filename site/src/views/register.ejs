@@ -38,18 +38,20 @@
 
 
                 <select name="Sexo" >
-                    <option selected>Selecciona tu sexo</option>
-                    <option value="select 1">Hombre</option>
-                    <option value="select 2">Mujer</option>
+                    <option value="" selected hidden>Selecciona tu sexo</option>
+                    <% generos.forEach(genero => { %>
+                        <option value="<%= genero.id %>"><%= genero.nombre %> </option>
+                    <% }) %>
                 </select>
                 
 
                 </select>
 
                 <select name="Rol" id="Rol" >
-                    <option selected>Selecciona la tu rol</option>
-                    <option value="1">Admin</option>
-                    <option value="2">User</option>
+                    <option value="" selected hidden>Selecciona tu rol</option>
+                    <% roles.forEach(rol => { %>
+                        <option value="<%= rol.id %>"><%= rol.nombre %> </option>
+                    <% }) %>
                 </select>
                 
 

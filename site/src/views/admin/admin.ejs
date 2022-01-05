@@ -13,7 +13,7 @@
     </div>
     
     
-    <div class="list">
+    <div class="list table-responsive">
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -21,30 +21,29 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Color</th>
                     <th scope="col">Talle</th>
-                    <th scope="col">Para</th> <!-- cambiar nombre a genero -->
+                    <th scope="col">Género</th> <!-- cambiar nombre a genero -->
                     <th scope="col">Coleccion</th>
-                    <th scope="col">Estado</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Opciones</th>
                 </tr>
             </thead>
             <tbody>
-                <%products.forEach(element =>{%>
+                <%productos.forEach(({id,nombre, color, talles, sexo, coleccion, imagenes, precio }) =>{%>
                     <tr>
-                        <th scope="row"><img src="/images/<%= element.image %>" alt=""></th>
-                        <td><%= element.name %></td>
-                        <td><%= element.color %></td>
-                        <td><%= element.talle %></td>
-                        <td><%= element.para %></td>
-                        <td><%= element.coleccion %></td>
-                        <td><%= element.estado %></td>
-                        <td><%= element.precio %></td>
+                        <th scope="row"><img src="/images/productos/<%= imagenes[0]?.nombre %>" alt=""></th>
+                        <td><%= nombre %></td>
+                        <td><%= color.nombre %></td>
+                        <td><%= talles.nombre %></td>
+                        <td><%= sexo.nombre %></td>
+                        <td><%= coleccion.nombre %></td>
+                        <td>$ <%= toThousand(precio) %></td>
                         <td class="adminboton">
                             <div class="botones">
                                
-                                <a href="/admin/edit/ <%= element.id %>" class="enviar">EDITAR</a>
-                                <form action="/admin/<%= element.id %>?_method=DELETE " method="POST">
-                                    <button type="submit" class="enviar">ELIMINAR</button>
+                                <a href="/admin/edit/ <%= id %>" class="btn btn-sm btn-info mb-2">EDITAR</a>
+                                <form action="/admin/<%= id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-sm btn-danger">ELIMINAR</button>
+                                </form>
                             </div>
                         </td>
                     </tr>

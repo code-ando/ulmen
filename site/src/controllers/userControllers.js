@@ -7,10 +7,22 @@ const bcrypt = require("bcryptjs")
 
 module.exports = {
     register: (req, res) => {
-        res.render('register')
+        let roles = db.Rol.findAll()
+        let generos = db.Genero.findAll()
+
+        Promise.all([roles,generos])
+
+            .then(([roles,generos]) => {
+                return res.render('register',{
+                    roles,
+                    generos
+                })
+            })
+            .catch(error => console.log(error))
     },
     login: (req, res) => {
-        res.render('login')
+     
+            return res.render('login')
     },
     profile: (req, res) => {
         db.Usuarios.findByPk(req.session.usuarioLogin.id)
@@ -24,15 +36,15 @@ module.exports = {
     },
     agregarUser: (req, res) => {
         const errors = validationResult(req)
-        let { Nombre, Apellido, email, password, DNI, nacimiento, Sexo, Rol } = req.body
+        let { Nombre, Apellido, Email, Password, DNI, Nacimiento, Sexo, Rol } = req.body
         if (errors.isEmpty()) {
             db.Usuarios.create({
                 nombre: Nombre.trim(),
                 apellido: Apellido.trim(),
-                email: email.trim(),
-                contraseña: bcrypt.hashSync(password, 12),
+                email: Email.trim(),
+                contraseña: bcrypt.hashSync(Password, 12),
                 DNI: DNI.trim(),
-                nacimiento: nacimiento.trim(),
+                nacimiento: Nacimiento.trim(),
                 id_genero: Sexo.trim(),
                 id_rol: Rol.trim()
 
@@ -40,19 +52,30 @@ module.exports = {
             }).then(usuario => {
                 req.session.usuarioLogin = {
                     id: usuario.id,
-                    nombre: usuario.nombre
-
-
+                    nombre: usuario.nombre,
+                    rol : usuario.id_rol
                 }
                 return res.redirect("/login")
             }).catch(error => console.log(error))
 
 
         } else {
-            return res.render('register', {
-                errors: errors.mapped(),
-                old: req.body
-            })
+
+            let roles = db.Rol.findAll()
+            let generos = db.Genero.findAll()
+    
+            Promise.all([roles,generos])
+    
+                .then(([roles,generos]) => {
+                    return res.render('register',{
+                        roles,
+                        generos,
+                        errors: errors.mapped(),
+                        old: req.body
+                    })
+                })
+                .catch(error => console.log(error))
+
         }
     },
     processLogin: (req, res) => {
@@ -69,6 +92,7 @@ module.exports = {
                 req.session.usuarioLogin = {
                     id: usuario.id,
                     nombre: usuario.nombre,
+                    rol : usuario.id_rol
 
                 }
                 return res.redirect("/")

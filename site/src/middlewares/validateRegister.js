@@ -31,7 +31,7 @@ module.exports = [
     check('DNI').notEmpty().withMessage("Se requiere el campo DNI").bail()
     .isLength({min: 8, max: 100}).withMessage('El campo Dni debe tener al menos 8 caracteres'),
 
-    check('nacimiento')
+    check('Nacimiento')
     .notEmpty()
     .withMessage("Debes ingresar una Fecha de nacimiento")
      .bail()
@@ -72,12 +72,12 @@ module.exports = [
     .notEmpty()
     .withMessage("seleccione el rol"),
 
-    check('email')
+    check('Email')
     .notEmpty()
     .withMessage("Se requiere el Email")
     .isEmail(),
 
-    body("email")
+    body("Email")
     .custom (value => {
         console.log(value)
         return db.Usuarios.findOne({
@@ -91,7 +91,7 @@ module.exports = [
         })
     }),
 
-    check('password')
+    check('Password')
     .notEmpty()
     .withMessage("Debes ingresar una contraseña.")
     .bail()

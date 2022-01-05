@@ -7,6 +7,7 @@ const methodOverride =  require('method-override');
 const session = require('express-session')
 const recordame = require('./middlewares/cookieRecordame')
 const usuarioLogin = require('./middlewares/usuarioLogin')
+const checkAdmin = require('./middlewares/checkAdmin')
 
 
 const main = require('./routes/main')
@@ -39,7 +40,7 @@ app.use(usuarioLogin)
 app.use('/', main)
 app.use('/', products)
 app.use('/', user)
-app.use('/admin', adminRouter);
+app.use('/admin', checkAdmin, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

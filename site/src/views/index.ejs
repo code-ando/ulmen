@@ -31,7 +31,7 @@
             <div class="container">
                 <%productos.forEach(producto =>{%>
                 <div class="product">
-                    <img src="/images/<%= producto.imagenes[0]?.nombre %>" alt="">
+                    <img src="/images/productos/<%= producto.imagenes[0]?.nombre %>" alt="">
                     <div>
                         <h3><%= producto.nombre %> </h3>
                         <span>$ <%= producto.precio %></span>
