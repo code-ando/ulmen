@@ -7,28 +7,29 @@
     <%- include('./partials/header') %>
     <main>
         <section>
+            <h1 class="title"><%= producto.nombre %> </h1>
             <div class="detalle">
+                
+                
                 <article class="imagenes">
                     <div class="producto1">
-                        <img src="/images/<%= product.image %>" alt="producto">
+                        <img src="/images/productos/<%=producto.imagen%>" alt="producto">
                     </div>
                     <div class="producto2">
-                        <img src="/images/<%= product.image %>" alt="producto">
-                        <img src="/images/<%= product.image %>" alt="producto">
-                        <img src="/images/<%= product.image %>" alt="producto">
-                        <img src="/images/<%= product.image %>" alt="producto">
-                    </div>
+                        <img src="/images/<%= producto.imagen %>" alt="producto">
+                        <img src="/images/<%= producto.imagen %>" alt="producto">
+                        <img src="/images/<%= producto.imagen %>" alt="producto">
+                        <img src="/images/<%= producto.imagen %>" alt="producto">
+                    </div> 
                 </article>
 
                 <div class="descripcion">
                     <article class="titulo">
-                        <small> <%= product.para %></small>
+                        
 
-                        <h3> <%= product.name %></h3>
+                        <h2> <%= producto.nombre %></h2>
 
-                        <p> <%= product.color %></p>
-
-                        <p> <%= product.precio %></p>
+                        <p> $ <%= producto.precio %></p>
                     </article>
 
                     <article class="talle">
@@ -55,7 +56,7 @@
                                 <li><a href="#">41</a></li>
                             </div>
                         </div>
-                    </article>
+                
 
                     <article class="botones">
 
@@ -86,14 +87,29 @@
 
                     </article>
                 </div>
+             
             </div>
+        </article>
+        <article class="descripcion2">
+            <div>
+            <h3>Descripcion: </h3><p><%= producto.descripcion %></p> <br>
+            <p>Genero: <%=producto.sexo.nombre%> </p> 
+            <p>Origen: Nacional</p>
+            <p>Garantia: Contra defecto de fabrica</p>
+            <p>Adecuado para: Entrenar</p>
+            <p>Estilo: Liso</p>
+            
+                
+            </div>
+        </article>
+
 
             <div class="recomendaciones">
                 <h2>Te puede interesar</h2>
                 <div class="reco">
-                    <img src="/images/aaa.jpg" alt="producto">
-                    <img src="/images/aaa.jpg" alt="producto">
-                    <img src="/images/aaa.jpg" alt="producto">
+                    <img src="/images/<%= producto.imagen %>" alt="producto">
+                    <img src="/images/<%= producto.imagen %>" alt="producto">
+                    <img src="/images/<%= producto.imagen %>" alt="producto">
                 </div>
             </div>
         </section>

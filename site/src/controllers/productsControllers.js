@@ -18,22 +18,48 @@ const controllers = {
 
             .then((genero) => {
                 return res.render('productFilter', {
-                    nombre : genero.nombre,
+                    nombre: genero.nombre,
                     productos: genero.productos
                 })
             })
             .catch((error) => console.log(error))
     },
-    productDetail: (req, res) => { res.render(path.join('productDetail')) },
+    productDetail:(req, res) => {
+		
+		db.Producto.findByPk(req.params.id, {
+			include : [{all:true}]
+		})
+			.then(producto => {
+				return res.render('productDetail',{
+					producto,
+					
+				})
+			})
+			.catch(error => console.log(error))
+
+	},
 
     productCart: (req, res) => { res.render(path.join('productCart')) },
 
-    productos: (req, res) => {
-        const { id } = req.params
-        const product = products.find(element => element.id === +id)
+    list: (req, res) => {
+        let categories = db.Categoria.findAll()
+        let productos = db.Producto.findAll({
+            include: { association: 'imagenes' }
+        })
+        Promise.all([categories, productos])
+            .then(([categories, productos]) => {
 
-        res.render('productDetail', { product })
+
+
+                return res.render('productos', {
+                    title: 'Express',
+                    productos,
+                    categories
+                });
+            })
+            .catch((error) => res.send(error))
     }
+
 }
 
 module.exports = controllers

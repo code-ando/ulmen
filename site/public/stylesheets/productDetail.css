@@ -2,9 +2,21 @@
     display: none;
 }
 
+.detail h1 {
+    font-size: 40px;
+}
+
+.detail h2{
+    font-size: 20PX;
+}
+
 .detail main section{
     width: 90%;
     margin: 0 auto;
+}
+.detail main section .title{
+    text-align: center;
+    padding: 6%;
 }
 
 .detail main article {
@@ -21,8 +33,8 @@
 }
 
 .detail main .titulo p{
-    margin: 5px 0;
-    margin-left: 5px;
+padding: 10% 0  10% 0;
+font-size: 40px ;
 }
 
 .detail main .producto1 img{
@@ -119,6 +131,10 @@
 .detail main .boton-corazon:active {
   text-shadow: 1px 3px rgba(85, 85, 85, 0.500);
   transform: translateY(2px);
+}
+
+.detail .descripcion2  p {
+    padding: 1%;
 }
 
 .detail main .detalle2 {
@@ -251,5 +267,6 @@
     .detail main .reco img{
         width: 20%;
     }
+   
 
 }
