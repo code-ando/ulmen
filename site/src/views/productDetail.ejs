@@ -13,14 +13,9 @@
                 
                 <article class="imagenes">
                     <div class="producto1">
-                        <img src="/images/productos/<%=producto.imagen%>" alt="producto">
+                        <img src="/images/productos/<%= producto.imagenes[0]?.nombre %>" alt="">
                     </div>
-                    <div class="producto2">
-                        <img src="/images/<%= producto.imagen %>" alt="producto">
-                        <img src="/images/<%= producto.imagen %>" alt="producto">
-                        <img src="/images/<%= producto.imagen %>" alt="producto">
-                        <img src="/images/<%= producto.imagen %>" alt="producto">
-                    </div> 
+                    
                 </article>
 
                 <div class="descripcion">
@@ -93,7 +88,6 @@
         <article class="descripcion2">
             <div>
             <h3>Descripcion: </h3><p><%= producto.descripcion %></p> <br>
-            <p>Genero: <%=producto.sexo.nombre%> </p> 
             <p>Origen: Nacional</p>
             <p>Garantia: Contra defecto de fabrica</p>
             <p>Adecuado para: Entrenar</p>

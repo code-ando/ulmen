@@ -27,7 +27,8 @@ const controllers = {
     productDetail:(req, res) => {
 		
 		db.Producto.findByPk(req.params.id, {
-			include : [{all:true}]
+			include : [{all:true}],
+            include: { association: 'imagenes' }
 		})
 			.then(producto => {
 				return res.render('productDetail',{
