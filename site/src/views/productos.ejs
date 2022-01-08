@@ -5,11 +5,36 @@
 
 <body class="detail">
     <%- include('./partials/header') %>
-<main>
+    <main>
+        <h1>Productos</h1>
+        <aside>
+            <h2>Filters</h2>
 
-<h1>productos</h1>
+            <div class="col-12 col-md-2">
+                <select class="form-select" name="" id="select-order">
+                    <option value="" selected hidden>Ordenar</option>
+                    <option value="name">Producto</option>
+                    <option value="price">Precio</option>
+                    <option value="categoryId">Categoría</option>
+                    <option value="id">Default</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-2">
+                <select class="form-select" id="select-filter">
+                    <option value="" selected hidden>Filtrar</option>
+                    <% categoria.forEach(category => { %>
+                        <option value="<%= categoria.id %>"><%= categoria.nombre %> </option>
 
-</main>
+                    <% }) %>
+                </select>
+            </div>
+
+        </aside>
+        <h2 id="total-productos"></h2>
+        <section id="table">
+            
+        </section>
+    </main>
 
 
     <%- include('./partials/footer') %>
