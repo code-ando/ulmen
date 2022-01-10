@@ -3,36 +3,30 @@
 
     <%- include('./partials/head') %>
 
-<body class="detail">
+<body class="home">
     <%- include('./partials/header') %>
     <main>
-        <h1>Productos</h1>
-        <aside>
-            <h2>Filters</h2>
-
-            <div class="col-12 col-md-2">
-                <select class="form-select" name="" id="select-order">
-                    <option value="" selected hidden>Ordenar</option>
-                    <option value="name">Producto</option>
-                    <option value="price">Precio</option>
-                    <option value="categoryId">Categoría</option>
-                    <option value="id">Default</option>
-                </select>
-            </div>
-            <div class="col-12 col-md-2">
-                <select class="form-select" id="select-filter">
-                    <option value="" selected hidden>Filtrar</option>
-                    <% categoria.forEach(category => { %>
-                        <option value="<%= categoria.id %>"><%= categoria.nombre %> </option>
-
-                    <% }) %>
-                </select>
+        <section class="lanzamiento">
+            <h1>¿PARA QUIEN COMPRAS?</h1>
+            <div class="row">
+                <a href="/productFilter?genero=2"><img src="/images/mujer1.jpg" alt=""></a>
+                <a href="/productFilter?genero=1"><img src="/images/hombre.jpg" alt=""></a>
+                <a href="/productFilter?genero=3"><img src="/images/nino.jpg" alt=""></a>
             </div>
 
-        </aside>
-        <h2 id="total-productos"></h2>
-        <section id="table">
-            
+            <h2>Todos los productos</h2>
+            <div class="container">
+                <%productos.forEach(producto =>{%>
+                <div class="product">
+                    
+                    <img src="/images/productos/<%= producto.imagenes[0]?.nombre %>" alt="">
+                    <div>
+                        <h3><%= producto.nombre %> </h3>
+                        <span>$ <%= producto.precio %></span>
+                    </div>
+                    <i class="fas fa-cart-plus icon"></i>
+                </div>
+                <% }) %>
         </section>
     </main>
 
