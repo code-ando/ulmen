@@ -68,10 +68,6 @@ module.exports = [
     .notEmpty()
     .withMessage("seleccione el Sexo"),
 
-    check("Rol")
-    .notEmpty()
-    .withMessage("seleccione el rol"),
-
     check('Email')
     .notEmpty()
     .withMessage("Se requiere el Email")

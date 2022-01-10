@@ -36,7 +36,7 @@ module.exports = {
     },
     agregarUser: (req, res) => {
         const errors = validationResult(req)
-        let { Nombre, Apellido, Email, Password, DNI, Nacimiento, Sexo, Rol } = req.body
+        let { Nombre, Apellido, Email, Password, DNI, Nacimiento, Sexo} = req.body
         if (errors.isEmpty()) {
             db.Usuarios.create({
                 nombre: Nombre.trim(),
@@ -46,7 +46,7 @@ module.exports = {
                 DNI: DNI.trim(),
                 nacimiento: Nacimiento.trim(),
                 id_genero: Sexo.trim(),
-                id_rol: Rol.trim()
+                id_rol: 2
 
 
             }).then(usuario => {

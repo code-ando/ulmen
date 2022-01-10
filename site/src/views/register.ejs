@@ -7,7 +7,7 @@
 
     <main>
         
-        <form class="formularios" id="formularios" action="/register" method="POST" enctype="multipart/form-data">
+        <form  class="formularios" id="formularios" action="/register" method="POST" enctype="multipart/form-data">
             <div class="form" id="for">
                 
                 <input type="text" name="Nombre" id="Nombre" placeholder="Juan" value="<%= locals.old && old.Nombre ? old.Nombre : null %>">
@@ -46,15 +46,7 @@
                 
 
                 </select>
-
-                <select name="Rol" id="Rol" >
-                    <option value="" selected hidden>Selecciona tu rol</option>
-                    <% roles.forEach(rol => { %>
-                        <option value="<%= rol.id %>"><%= rol.nombre %> </option>
-                    <% }) %>
-                </select>
                 
-
                 <input type="mail" name="Email" id="Email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.email ? old.email : null %>">
                 <span id="erroresEmail" style="color: red;"></span> <br>
                 <%if (locals.errors && errors.Email) {%>
@@ -71,9 +63,8 @@
                 
             </div>
              
-
             <div class="image">
-                <input name="Image"  id="Image" type="file">
+                <input name="image"  id="Image" type="file">
             </div>
             <div class="botones">
                 <button class="enviar" type="submit">Enviar</button>
