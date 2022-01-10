@@ -13,7 +13,10 @@ let $DNI = qs('#DNI')
 let $DNIError = qs('#erroresDNI')
 let $Nacimiento = qs('#Nacimiento')
 let $NacimientoError = qs('#erroresNacimiento')
-
+let $Rol = qs('#Rol')
+let $RolError = qs('#erroresRol')
+let $Sexo = qs('#Sexo')
+let $SexoError = qs('#erroresSexo')
 let $Email = qs('#Email')
 let $EmailError = qs('#erroresEmail')
 let $Password = qs('#Password')
@@ -36,12 +39,12 @@ $Nombre.addEventListener('blur',function() {
             validationsErrors = true
             break;
         case !regExAlpha.test($Nombre.value) :
-            $NombreError.innerHTML = "Debes ingresar un nombre valido"
             validationsErrors = true
               break;
         default:
             $NombreError.innerHTML= ""
-            $Nombre.style.border = "3px solid green"
+            
+            $Nombre.classList.add(is-value)
             validationsErrors = false
             break;
     } 
@@ -50,7 +53,7 @@ $Apellido.addEventListener('change',function(){
     switch (true) {
         
         case $Apellido.value.trim().length <= 2 :
-            $ApellidoError.innerHTML = `${iconError} El apellido debe ser mayor a 2 caracteres`
+            $ApellidoError.innerHTML = `${iconError} El apellido debe ser mayor a 2 caracteres `
             validationsErrors = true
             break;
         case !regExAlpha.test($Apellido.value) :
@@ -68,7 +71,7 @@ $DNI.addEventListener('change',function(){
     switch (true) {
         case $DNI.value.trim().length <= 7 :
             $DNIError.innerHTML = `${iconError} DNI invalido `
-           
+            
             validationsErrors = true
             break;
 
@@ -92,7 +95,7 @@ $Nacimiento.addEventListener('blur', function(){
             
             default:
                 erroresNacimiento.innerHTML= ""
-                $Nacimiento.classList.remove('class')
+                
                 $Nacimiento.style.border = "3px solid green"
                 validationsErrors = false
                 
@@ -124,24 +127,57 @@ $Nacimiento.addEventListener('blur', function(){
       $Password.addEventListener('blur', ()=>{
         switch (true) {
             case !$Password.value.trim():
-              $PasswordError.innerHTML= 'Contraseña obligatoria'
-              
+              $PasswordError.innerHTML= `${iconError} Contraseña es obligatoria ` 
+             
               validationsErrors = true
                 break;
                 case !regExPass.test($Password.value):
-                   $PasswordError.innerHTML ='La contraseña debe tener: entre 8 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                   $PasswordError.innerHTML = `${iconError} La contraseña debe tener: entre 8 o 12 caracteres, al menos una mayúscula, una minúscula y un número ` 
                validationsErrors = true
               break
         
             default:
              $PasswordError.innerHTML= ""    
-              $Password.classList.remove('class')
+              
               $Password.style.border = "3px solid green"
               validationsErrors = false
               break;
         }
     })
+
+    $Rol.addEventListener('blur', function(){
+        switch (true) {
+            case !$Rol.value.trim():
+                erroresRol.innerHTML =`${iconError} Seleccione un rol `
+               
+                validationsErrors = true
+                break;
+                
+                default:
+                    erroresRol.innerHTML= ""
+                   
+                    $Rol.style.border = "3px solid green"
+                    validationsErrors = false
+                    
+          }
+      })
     
+      $Sexo.addEventListener('blur', function(){
+        switch (true) {
+            case !$Sexo.value.trim():
+                erroresSexo.innerHTML =`${iconError} Seleccione un genero `
+                
+                validationsErrors = true
+                break;
+                
+                default:
+                    erroresSexo.innerHTML= ""
+                    $Sexo.classList.remove('class')
+                    $Sexo.style.border = "3px solid green"
+                    validationsErrors = false
+                    
+          }
+      })
 })
 
 

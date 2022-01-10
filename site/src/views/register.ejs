@@ -37,22 +37,31 @@
                 <% } %>
 
 
-                <select name="Sexo" >
+                <select name="Sexo" id="Sexo">
                     <option value="" selected hidden>Selecciona tu sexo</option>
                     <% generos.forEach(genero => { %>
                         <option value="<%= genero.id %>"><%= genero.nombre %> </option>
                     <% }) %>
                 </select>
+                <span id="erroresSexo" style="color: red;"></span> <br>
+                <%if (locals.errors && errors.Sexo) {%>
+                    <small class="error"> <%= errors.Sexomsg %> </small>
+                <% } %>
                 
 
-                </select>
+                
 
                 <select name="Rol" id="Rol" >
                     <option value="" selected hidden>Selecciona tu rol</option>
                     <% roles.forEach(rol => { %>
                         <option value="<%= rol.id %>"><%= rol.nombre %> </option>
                     <% }) %>
+
                 </select>
+                <span id="erroresRol" style="color: red;"></span> <br>
+                <%if (locals.errors && errors.Rol) {%>
+                    <small class="error"> <%= errors.Rolmsg %> </small>
+                <% } %>
                 
 
                 <input type="mail" name="Email" id="Email" placeholder="juangonzalez@gmail.com" value="<%= locals.old && old.email ? old.email : null %>">
