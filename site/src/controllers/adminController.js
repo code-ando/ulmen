@@ -127,7 +127,7 @@ module.exports = {
             try {
                 await Producto.update(
                     {
-                        title,
+                        title : nombre,
                         id_colores : color,
                         id_talles : talle,
                         id_sexo : genero,
