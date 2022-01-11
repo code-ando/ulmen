@@ -26,19 +26,23 @@ const controllers = {
     },
     productDetail:(req, res) => {
 		
-		db.Producto.findByPk(req.params.id, {
+		let producto = db.Producto.findByPk(req.params.id, {
 			include : [{all:true}],
             include: { association: 'imagenes' }
 		})
-			.then(producto => {
+        let talles = db.Talle.findAll()
+
+        Promise.all([producto,talles])
+			.then(([producto,talles]) => {
 				return res.render('productDetail',{
 					producto,
-					
+					talles
 				})
 			})
 			.catch(error => console.log(error))
 
 	},
+
 
     productCart: (req, res) => { res.render(path.join('productCart')) },
 

@@ -20,17 +20,17 @@
                     </div>  
                 </form
                 ></li>
-                <li><a href="profile"><i class="fas fa-user-circle"></i></a></li>
+                <li><a href="/profile"><i class="fas fa-user-circle"></i></a></li>
                 <% if (locals.usuarioLogin.rol == 1) { %>
-                    <li><a href="admin"><i class="fas fa-user-cog"></i></a></li>
+                    <li><a href="/admin"><i class="fas fa-user-cog"></i></a></li>
 
                 <% } %>
 
                 <% } else {%>
-                <li><a href="login"><i class="far fa-user"></i></a></li>
-                <li><a href="register"><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/login"><i class="far fa-user"></i></a></li>
+                <li><a href="/register"><i class="fas fa-sign-in-alt"></i></a></li>
                 <% } %>
-                <li><a href="productCart"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
             </div>
 
             <li><a href="/">Home</a></li>
