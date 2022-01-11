@@ -115,7 +115,7 @@ module.exports = {
 
         let results = validationResult(req);
         let productDetail;
-        const {title, color, talle, genero, coleccion, precio} = req.body;
+        const {nombre, color, talle, genero, coleccion, precio} = req.body;
         const {id} = req.params;
 
         try {
