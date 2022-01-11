@@ -20,17 +20,24 @@
 
                         </article>
 
-                        <div class="descripcion">
-                            <article class="titulo">
+                        <h4>Talle disponible:</h4>
+
+                        <div class="talles">
+                            <div class="d-flex flex-column" >
+                               <% talles.forEach(talle => { %>
+                                    <li class="<%= talle.id === producto.id_talles && 'bg-secondary' %>"><%= talle.nombre %> </li>
+                               <% }) %>
+                            </div>
+                          
+                        </div>
+                    </article>
 
 
                                 <h2>
                                     <%= producto.nombre %>
                                 </h2>
 
-                                <p> $ <%= producto.precio %>
-                                </p>
-                            </article>
+                        <button onclick="addItem(event, '<%=producto.id%>')" class="boton-carrito" type="button"> Agregar al carrito </button>
 
                             <article class="talle">
 
