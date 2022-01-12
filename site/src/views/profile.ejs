@@ -7,7 +7,36 @@
 
     <%- include('./partials/header') %>
 
-    <div>
+    <section class="container">
+        <div class="container-image">
+            <img class="avatar" src="/images/usuario.png" alt="">
+        </div>
+        <div class="nombre">
+            <p><%=usuario.nombre%></p>
+            <p><%=usuario.apellido%></p>
+        </div>
+        <div class="email">
+            <p class="text-muted"><%=usuario.email%></p>
+        </div>
+        <div class="date">
+            <div>
+                <p>Fecha de Nacimiento</p>
+                <h6 class="text-muted"><%=usuario.nacimiento%></h6>
+            </div>
+            <div>
+                <p>D.N.I.</p>
+                <h6 class="text-muted"><%=usuario.DNI%></h6>
+            </div>
+        </div>
+        <div class="botones5">
+            <form action="enviar"></form>
+          <a class="enviar" href="#">Editar Perfil</a>
+        </div>
+    </section>
+
+    
+
+    <!-- <div>
         <h5>PERFIL DE USUARIO</h5>
         <form action="/update?_method=PUT" method="POST" enctype="multipart/form-data">
             <div>
@@ -48,7 +77,7 @@
             </div>
 
         </form>
-    </div>
+    </div> -->
 
     <%- include('./partials/footer') %>
 </body>

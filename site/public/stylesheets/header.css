@@ -79,20 +79,25 @@ nav {
 }
 
 .menu .enviar {
+    width: 100px;
     background-color: var(--botonCeleste);
     color: white;
-    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    margin: 10px auto;
+    margin: 10px;
 }
+
 
 
 .menu .enviar:active{
     box-shadow: 1px 3px rgba(85, 85, 85, 0.500);
     transform: translateY(2px);
+}
+
+.menu .botones{
+
 }
 
 @media screen and (min-width: 768px) {
