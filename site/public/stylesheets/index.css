@@ -1,6 +1,6 @@
 
 .home main section{
-    width: 95%;
+    width: 90%;
     text-align: center;
 }
 
@@ -46,8 +46,6 @@
 
 .home .lanzamiento h1{
     margin: 30px;
-    
-   
 }
 
 .home .lanzamiento {
@@ -55,8 +53,8 @@
 }
 
 .home .lanzamiento img{
+
     width:70%;
-    height: 125px;
     margin: 5px;  
 }
 
@@ -116,7 +114,6 @@ object-fit: cover;
         
     }
     .home .container{
-    
         display: grid;
         margin: 0 auto;
         grid-template-columns: repeat(4, 2fr);
@@ -126,9 +123,9 @@ object-fit: cover;
 @media screen and (min-width:1000px){
     .home .lanzamiento img{
     
-        width: 33%;
-        height: 250px;
-        margin: 5px auto;
+        width: 28%;
+        height: 200px;
+        margin: 5px 20px;
         
     }
     .home .container{

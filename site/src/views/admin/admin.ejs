@@ -8,7 +8,6 @@
     <%-include('./partials/header')%>
     <div class="botones5">
         <form action="enviar"></form>
-    
       <a class="enviar" href="/admin/create">NUEVO</a>
     </div>
     
@@ -39,7 +38,6 @@
                         <td>$ <%= toThousand(precio) %></td>
                         <td class="adminboton">
                             <div class="botones">
-                               
                                 <a href="/admin/edit/ <%= id %>" class="btn btn-sm btn-info mb-2">EDITAR</a>
                                 <form action="/admin/<%= id %>?_method=DELETE" method="POST">
                                     <button type="submit" class="btn btn-sm btn-danger">ELIMINAR</button>
