@@ -34,51 +34,6 @@
         </div>
     </section>
 
-    
-
-    <!-- <div>
-        <h5>PERFIL DE USUARIO</h5>
-        <form action="/update?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div>
-                <label for="Nombre">Nombre</label>
-                <input type="text" class="Nombre" id="Nombre"
-                    name="Nombre"
-                    value="<%=usuario.nombre%>">
-                <span>
-                    <%= locals.errors && locals.errors.nombre ? errors.nombre.msg : null %>
-                </span>
-            </div>
-            <div class="col-12 col-md-6 mb-3">
-                <label for="email">Email</label>
-                <input type="email" class="email" id="email"
-                     name="email" readonly value="<%= usuario.email %>">
-                <span>
-                    <%= locals.errors && locals.errors.email ? errors.email.msg : null %>
-                </span>
-            </div>
-            <div>
-                <label for="contraseña">Cambiar contraseña</label>
-                <input type="password" id="contraseña"
-                    name="contraseña">
-                <span>
-                    <%= locals.errors && locals.errors.contraseña ? errors.contraseña.msg :
-                        null %>
-                </span>
-            </div>
-            
-            <div>
-                <label for="image">Cambiar imagen</label>
-                <input type="file" name="image" id="image" hidden>
-
-            </div>
-            <div>
-                <button type="submit" class="boton">Guardar cambios</button>
-                <a href="/" class="button">Cancelar</a>
-            </div>
-
-        </form>
-    </div> -->
-
     <%- include('./partials/footer') %>
 </body>
 
