@@ -9,7 +9,7 @@ El mismo cuenta con ropa, calzado y accesorios en general, con una amplia gama d
 - 23 años, residencia en San Miguel. Desarrollador web Full Stack con Digital House y Fundacion Formar. 
 #### Gonzalo Hereñu 
 - 18 años, Programador FullStack con Digital House y Fundacion Formar residencia en La Matanza.
-#### Sergio Valdez 
+#### Gabriela Quispe 
 -
 #### Santiago Valenzuela 
 - 31 años, residencia San Miguel
