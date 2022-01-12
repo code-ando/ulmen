@@ -35,7 +35,7 @@ CREATE TABLE `carrito` (
   CONSTRAINT `fk_carrito_ordenes` FOREIGN KEY (`id_orden`) REFERENCES `ordenes` (`id`) ON DELETE CASCADE,
   CONSTRAINT `fk_carrito_productos` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id`),
   CONSTRAINT `fk_carrito_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `carrito` (
 
 LOCK TABLES `carrito` WRITE;
 /*!40000 ALTER TABLE `carrito` DISABLE KEYS */;
-INSERT INTO `carrito` VALUES (6,43,15,1,5),(9,43,17,1,1),(11,38,22,2,3);
+INSERT INTO `carrito` VALUES (6,43,15,1,5),(9,43,17,1,1),(11,38,22,2,3),(13,26,20,3,2),(14,26,27,3,1);
 /*!40000 ALTER TABLE `carrito` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +185,7 @@ CREATE TABLE `ordenes` (
   PRIMARY KEY (`id`),
   KEY `fk_ordenes_usuarios_idx` (`id_usuario`),
   CONSTRAINT `fk_ordenes_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,7 +194,7 @@ CREATE TABLE `ordenes` (
 
 LOCK TABLES `ordenes` WRITE;
 /*!40000 ALTER TABLE `ordenes` DISABLE KEYS */;
-INSERT INTO `ordenes` VALUES (1,43,'pendiente'),(2,38,'pendiente');
+INSERT INTO `ordenes` VALUES (1,43,'pendiente'),(2,38,'pendiente'),(3,26,'pendiente');
 /*!40000 ALTER TABLE `ordenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (4,'Zapatailla Adidas Low','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',5000,3,2,1,1,3),(15,'Medias Havic','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',2000,6,2,4,1,8),(16,'Short Women','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',12000,8,2,2,4,9),(17,'Remera Training','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',13000,4,2,1,4,1),(18,'Calza Women','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',600,5,1,2,1,4),(20,'Chomba Niño','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',7000,6,1,3,3,3),(21,'Abrigo Niño','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',5600,3,1,3,3,3),(22,'Buzo naruto','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',3000,3,3,1,3,3),(23,'Bermuda Casual','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu',20000,5,3,1,3,9),(24,'Zapatillas Air','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',20000,9,3,1,1,3),(25,'Medias Termicas Low','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',8000,6,2,4,1,8),(26,'Conjunto Jordan','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',60000,1,2,1,1,7),(27,'Conjunto Deportivo Kid','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',12000,3,4,3,1,7),(29,'Conjunto Women Fila','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',9000,3,2,2,1,7),(30,'Calza Termica ','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',9000,5,1,1,1,4);
+INSERT INTO `producto` VALUES (4,'Buzo Puma ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',5000,3,2,1,1,3),(15,'Medias Havic','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',2000,6,2,4,1,8),(16,'Short Women','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',12000,8,2,2,4,9),(17,'Remera Training','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',13000,4,2,1,4,1),(18,'Calza Women','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',600,5,1,2,1,4),(20,'Chomba Niño','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',7000,6,1,3,3,3),(21,'Abrigo Niño','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',5600,3,1,3,3,3),(22,'Buzo naruto','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',3000,3,3,1,3,3),(23,'Bermuda Casual','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu',20000,5,3,1,3,9),(24,'Zapatillas Air','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',20000,9,3,1,1,3),(25,'Medias Termicas Low','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',8000,6,2,4,1,8),(26,'Conjunto Jordan','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',60000,1,2,1,1,7),(27,'Conjunto Deportivo Kid','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',12000,3,4,3,1,7),(29,'Conjunto Women Fila','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',9000,3,2,2,1,7),(30,'Calza Termica ','Lorem ipsum dolor sit amet, consctetur adipiscing elit. Nunc turpis turpis, faucibus in euismod eu, malesuada id arcu. Praesent placerat dui eu ',9000,5,1,1,1,4);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -355,4 +355,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-11 13:37:01
+-- Dump completed on 2022-01-12 13:57:43
