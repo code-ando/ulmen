@@ -1,6 +1,6 @@
 
 .home main section{
-    width: 90%;
+    width: 95%;
     text-align: center;
 }
 
@@ -75,20 +75,37 @@
 
 }
 
-.home .product {
+.home .product{
+    background-color: #fff;
+    border-radius: 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2rem !important
+}
+
+/* .home .product {
     box-sizing: border-box;
     border:1px solid #ccc;
     padding: 5px;
     text-align: center;
-}
+} */
 
 .home .product img{
-padding: 10px;
 width: 100%;
-height: 150px;
+height: 100px;
 object-fit: cover;
 
 }
+
+.home .product .nombre{
+    margin: 0 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #272727;
+    position: relative;
+    top: 8px
+}
+
+
 
 .home .container h3 {
     text-align: center;

@@ -53,6 +53,7 @@ nav {
     padding: 5px;
 }
 
+
 .menu li {
     display: none;
     line-height: 20px;
@@ -86,9 +87,17 @@ nav {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    margin: 10px;
 }
 
+.menu .button-cerrar {
+    width: 50px;
+    background-color: var(--botonCeleste);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
 
 
 .menu .enviar:active{
@@ -96,8 +105,12 @@ nav {
     transform: translateY(2px);
 }
 
-.menu .botones{
-
+.menu .cerrar{
+    position: fixed;
+    width: 45px;
+    border-radius: 50px;
+    bottom: 450px;
+    right: 2px;
 }
 
 @media screen and (min-width: 768px) {

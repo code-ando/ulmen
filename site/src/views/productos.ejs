@@ -19,12 +19,13 @@
                 <%productos.forEach(producto =>{%>
                 <div class="product">
                     
-                    <a href="/productDetail/<%=producto.id%>"><img src="/images/productos/<%= producto.imagenes[0]?.nombre %>" alt=""></a>
+                    <a href="/productDetail/<%=producto.id%>"><img src="/images/productos/<%= producto.imagenes[0]?.nombre %>" alt="">
                     <div>
-                        <h3><%= producto.nombre %> </h3>
+                        <p class="nombre"><%= producto.nombre %> </p>
                         <span>$ <%= producto.precio %></span>
                     </div>
                     <i class="fas fa-cart-plus icon"></i>
+                </a>
                 </div>
                 <% }) %>
         </section>
