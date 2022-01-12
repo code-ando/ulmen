@@ -44,7 +44,7 @@ $Nombre.addEventListener('blur',function() {
         default:
             $NombreError.innerHTML= ""
             
-            $Nombre.classList.add(is-value)
+            $Nombre.style.border = "3px solid green"
             validationsErrors = false
             break;
     } 
@@ -145,7 +145,7 @@ $Nacimiento.addEventListener('blur', function(){
         }
     })
 
-    $Rol.addEventListener('blur', function(){
+   /* $Rol.addEventListener('blur', function(){
         switch (true) {
             case !$Rol.value.trim():
                 erroresRol.innerHTML =`${iconError} Seleccione un rol `
@@ -154,29 +154,41 @@ $Nacimiento.addEventListener('blur', function(){
                 break;
                 
                 default:
-                    erroresRol.innerHTML= ""
+                    $SexoError.innerHTML= ""
                    
                     $Rol.style.border = "3px solid green"
                     validationsErrors = false
                     
           }
-      })
+      })*/
     
       $Sexo.addEventListener('blur', function(){
         switch (true) {
             case !$Sexo.value.trim():
-                erroresSexo.innerHTML =`${iconError} Seleccione un genero `
+                erroresSexo.innerHTML =`${iconError} selecciona un genero `
                 
                 validationsErrors = true
                 break;
                 
                 default:
                     erroresSexo.innerHTML= ""
-                    $Sexo.classList.remove('class')
+                    
                     $Sexo.style.border = "3px solid green"
                     validationsErrors = false
                     
           }
+      })
+      $Sexo.addEventListener('blur', function(){
+        if(!$Sexo.value.trim()){
+          $erroresSexo.innerHTML = `${iconError} El color es obligatorio`;
+          
+          validationsErrors = true;
+        }else {
+          
+          $colorErrors.innerHTML = ''
+          $Sexo.style.border = "3px solid green"
+          validationsErrors = false;
+        }
       })
 })
 
